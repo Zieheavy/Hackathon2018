@@ -1,3 +1,5 @@
+<?php require ('inc/connection.php'); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
