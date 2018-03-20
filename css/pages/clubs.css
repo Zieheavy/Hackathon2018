@@ -33,7 +33,8 @@
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-height: 69vh;
+    max-width: 70vmin;
 }
 
 /* Caption of Modal Image */
@@ -91,87 +92,18 @@
     }
 }
 
-
-
-.grid-a1{
-	width: 500px;
-	height: auto;
-	background: #ededed;
-	overflow: hidden;
-	padding: 10px;
-	margin: 5px;
+.modalRight{
+    color: white;
+    font-size: 5vmin;
+    right: 2vmin;
+    position: absolute;
+    top: 40%;
 }
 
-.link-a1{
-	color: #000;
-	border: 1px solid #000;
-	border-radius: 2px;
-	padding: 5px;
-	width: 300px;
-	cursor: pointer;
-}
-
-.panel-a1{
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	padding: 5px;
-	margin: 5px 0px;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
-	opacity: 1;
-	-webkit-transition: all .2s;
-	-o-transition: all .2s;
-	transition: all .2s;
-}
-
-.panel-a2{
-	position: fixed;
-	top: -150%;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	margin: auto;
-	background: #fff;
-	color: #000;
-	width: 500px;
-	height: 100px;
-	padding: 10px;
-	text-align: center;
-	overflow: hidden;
-	z-index: 999;
-	-webkit-transition: all .5s;
-	-o-transition: all .5s;
-	transition: all .5s;
-}
-
-.overlay-panel{
-	position: fixed;
-	z-index: 998;
-	background: rgba(0,0,0,0.7);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	display: none;
-}
-
-.next,
-.previous{
-	border: 2px solid #000;
-	border-radius: 3px;
-	padding: 3px;
-	margin: 3px;
-	color: #000;
-	display: block;
-	cursor: pointer;
-}
-
-.opac{
-	opacity: 0 !important;
-}
-
-.in{
-	top: 0 !important;
+.modalLeft{
+    color: white;
+    font-size: 5vmin;
+    left: 2vmin;
+    position: absolute;
+    top: 40%;
 }
