@@ -44,8 +44,8 @@
 .title{
 	font-weight:300;
 }
-.card-body{z-index: 1;}
-.card-body::before {
+.skew{z-index: 1;}
+.skew::before {
 	content: " ";
     background: white;
     height: 100px;
