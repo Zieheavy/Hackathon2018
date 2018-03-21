@@ -5,6 +5,8 @@ $(document).ready(function(){
   var images;
   var events;
 
+  getSession();
+
   $.post( "inc/getClub.php", {
     club: getUrlParameter('club')
   }, function(response,status){

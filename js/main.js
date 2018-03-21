@@ -51,3 +51,14 @@ function repeatItem(repeatedClass){
   cloned.insertAfter(lastRepeatingGroup);
   resetAttributeNames(cloned)
 }
+
+
+function getSession(){
+  var returnArray;
+    $.post( "inc/getSession.php", {
+    }, function(response,status){
+      console.log(response)
+      returnArray = JSON.parse(response);
+    });
+  return returnArray;
+}

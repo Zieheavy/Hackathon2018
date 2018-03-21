@@ -23,6 +23,7 @@ $(document).ready(function(){
 		$.post( "inc/logout.php", {
 		}, function(response,status){
 			console.log(response)
+		  getSession();
 			if(response == 'loggout'){
 				console.log('logout')
 				$('.js-login-title').text('Login')
@@ -126,6 +127,7 @@ $(document).ready(function(){
 			password: $('.js-password').val()
 	  }, function(response,status){
 			if(response	== "loggedin"){
+		  getSession();
 				loginStyling();
 			}
 	  });
