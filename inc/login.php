@@ -1,7 +1,7 @@
 <?php
   session_start();
-  session_destroy();
 
+// session_destroy();
   if(!isset($_SESSION['username'])){
     $_SESSION['username'] = "";
   }
@@ -10,6 +10,9 @@
   }
   if(!isset($_SESSION['privileges'])){
     $_SESSION['privileges'] = "";
+  }
+  if(!isset($_SESSION['loggedin'])){
+    $_SESSION['loggedin'] = 0;
   }
 
   $conn =  new mysqli("localhost", "root", "", "businessenergy");
@@ -29,6 +32,7 @@
         $_SESSION['username'] = $usersArray[$i]['name'];
         $_SESSION['password'] = $usersArray[$i]['password'];
         $_SESSION['privileges'] = $usersArray[$i]['Privileges'];
+          $_SESSION['loggedin'] = 1;
         echo "loggedin";
         // echo json_encode($_SESSION);
       }

@@ -1,5 +1,5 @@
 <?php
-$conn =  new mysqli("localhost", "root", "", "businessenergy");
+include 'defaults.php';
 $coordinaten = array();
 if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
