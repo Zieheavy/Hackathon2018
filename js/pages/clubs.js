@@ -4,6 +4,7 @@ $(document).ready(function(){
   var info;
   var images;
   var events;
+  var selected = 0;
 
   getSession();
 
@@ -63,7 +64,7 @@ $(document).ready(function(){
     temp += "<div class='title' id='pop-title'>Event Event Evenets</div>"
     temp += "<i class='fa fa-circle positive' aria-hidden='true'></i>"
     temp += "<div class='iconInformation'>Er zijn plaatsen vrij</div>"
-    temp += "<div class='reserve' id='js-reserve_1'>Reserve</div>"
+    temp += "<div class='reserve'>Reserve</div>"
     for(var i = 0; i < events.length; i++){
       $('#startTime_'+(i+1)).text(events[i].startdatum)
       $('#finishTime_'+(i+1)).text(events[i].einddatum)
@@ -78,20 +79,20 @@ $(document).ready(function(){
         }).click(function(e) {
             $('.lesson').popover('hide');
             $(this).popover('show');
-            var id = parseInt($(this).find(".startTime").attr('id').split('_')[1])-1
+            selected = parseInt($(this).find(".startTime").attr('id').split('_')[1])-1
             setTimeout(function () {
-              console.log(getSession().loggedin )
+              console.log(selected)
               if(getSession().loggedin == 1){
-                $('.reserve').css('display','inline');
+                $('.reserve').css('display','inline ');
               }else{
                 $('.reserve').css('display','none');
               }
-              $('#pop-title').text(events[id].naam)
-              if(parseInt(events[id].ingeschreven) >= parseInt(events[id].deelnemers)){
+              $('#pop-title').text(events[selected].naam)
+              if(parseInt(events[selected].ingeschreven) >= parseInt(events[selected].deelnemers)){
                 console.log("full")
                 $('.fa-circle').css('color','red')
                 $('.iconInformation').text('er zijn geen plaatsen meer')
-              }else if(Math.floor(parseInt(events[id].deelnemers)/100*90) <= parseInt(events[id].ingeschreven)){
+              }else if(Math.floor(parseInt(events[selected].deelnemers)/100*90) <= parseInt(events[selected].ingeschreven)){
                 console.log("almost full")
                 $('.fa-circle').css('color','orange')
                 $('.iconInformation').text('er zijn weinig plaatsen')
@@ -178,9 +179,8 @@ $(document).ready(function(){
     $('#myModal').css('display','none')
   })
 
-  $('body').on('click','#js-reserve_1',function(){
+  $('body').on('click','.reserve',function(){
   // $('#js-reserve_1').on('click',function(){
-    console.log('click')
-    window.location.replace("index.html?event=1");
+    window.location.replace("reserve.html?id="+selected);
   })
 });
