@@ -207,3 +207,28 @@
     background-repeat: no-repeat;
     color: white;
 }
+
+.button1{
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+.button2{
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    transform-origin: bottom left;
+    -ms-transform: skew(-15deg, 0deg);
+    -webkit-transform: skew(-15deg, 0deg);
+    transform: skew(-15deg, 0deg);
+    margin-left: -10px;
+    margin-right: -10px;
+    z-index: 1;
+}
+
+.button3{
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    z-index: 0;
+}
