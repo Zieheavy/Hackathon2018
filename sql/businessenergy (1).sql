@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2018 at 01:23 PM
+-- Generation Time: Mar 21, 2018 at 01:27 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `businessenergy`
 --
+CREATE DATABASE IF NOT EXISTS `businessenergy` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `businessenergy`;
 
 -- --------------------------------------------------------
 
