@@ -97,6 +97,14 @@
   display: inline-block;
 }
 
+.clear{
+	opacity: 0;
+	height: 0;
+	width: 0;
+	margin: 0;
+	padding: 0;
+}
+
 #myImg {
     border-radius: 5px;
     cursor: pointer;

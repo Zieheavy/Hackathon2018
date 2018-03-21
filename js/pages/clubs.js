@@ -2,18 +2,50 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 $(document).ready(function(){
-  var images = [];
   var selectedImage = 0;
   var club;
+  var info;
+  var images;
 
   $.post( "inc/getClub.php", {
     club: getUrlParameter('club')
   }, function(response,status){
     console.log(JSON.parse(response))
     club = JSON.parse(response)[0];
-    console.log(club.naam)
     $('.js-club-name').text(club.naam)
     $('.js-club-info').text(club.info)
+  });
+
+  $.post( "inc/getInfo.php", {
+    club: getUrlParameter('club')
+  }, function(response,status){
+    console.log(JSON.parse(response))
+    info = JSON.parse(response);
+    console.log(info)
+    if(info.length >= 1){
+      $('#js-info-title_1').text(info[0].title)
+      $('#js-info_1').text(info[0].content)
+      if(info.length >= 2){
+        $('.js-more-info').removeClass('clear')
+        for(var i = 1; i < info.length; i++){
+          $('.js-collapsed').append("<h1>" + info[i].title + "</h1>")
+          $('.js-collapsed').append("<p>" + info[i].content + "</p>")
+        }
+      }
+    }
+  });
+
+  $.post( "inc/getImages.php", {
+    club: getUrlParameter('club')
+  }, function(response,status){
+    console.log(JSON.parse(response))
+    images = JSON.parse(response);
+    console.log(images)
+    $('.js-images-container').text('')
+    for(var i = 0; i < images.length; i++){
+      console.log(images[i].url)
+      $('.js-images-container').append("<img class='js-image' src='img/" + images[i].url + "'>")
+    }
   });
 
   $("#js-toggle-collapsed").click(function() {
@@ -29,7 +61,8 @@ $(document).ready(function(){
     }
   });
 
-  $('.js-image').on('click',function(){
+  $('body').on('click','.js-image',function(){
+  // $('.js-image').on('click',function(){
     images = [];
     selectedImage = 0;
     for(var i = 0; i < $(this).siblings().length+1; i++){

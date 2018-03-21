@@ -5,14 +5,14 @@
 	<meta charset="utf-8">
 
     <!-- For rendering on mobile devices and touch zooming   -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" type="text/css" href="css/pages/clubs.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="css/sideBar.css">
+	<!-- <link rel="stylesheet" href="css/sideBar.css"> -->
 	<title>Hackathon2018</title>
 </head>
 <body>
@@ -35,7 +35,7 @@
 	<div class="jumbotron">
 		<div class="row">
 			<h1 class="col-2"></h1>
-			<h1 class="col-4 display-4">"SVS Stevensbeek"</h1>
+			<h1 class="col-4 display-4 js-club-name">"SVS Stevensbeek"</h1>
 		</div>
 	</div>
 	<div class="row ">
@@ -46,25 +46,23 @@
 		<div class="card">
 		<h5 class="card-header">Featured</h5>
 	  <div class="card-body js-collapsed-container collapsed">
-			<h1>Fit For Free Alkmaar</h1>
-			<p>
+			<p class="js-club-info">
 				Sportschool Fit For Free Alkmaar is het fitnesscentrum in Alkmaar, waar je op de manier kan sporten die bij jou past. Loop gerust eens binnen aan de Vondelstraat 39 en ontdek of fitness wat voor jou is.
 			</p>
-			<h1>Over onze club</h1>
-			<p>
+			<h1 id="js-info-title_1">Over onze club</h1>
+			<p id="js-info_1">
 				Sportschool Fit For Free Alkmaar is het fitnesscentrum in Alkmaar, waar je op de manier kan sporten die bij jou past. Loop gerust eens binnen aan de Vondelstraat 39 en ontdek of fitness wat voor jou is.
 			</p>
 			<div class="js-collapsed collapse" id="text">
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
-				ulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+
 			</div>
-			<a id="js-toggle-collapsed">Read More</a>
+			<a id="js-toggle-collapsed" class="clear js-more-info">Read More</a>
 	  </div>
 	</div>
 
 	<div class="card">
 		<h5 class="card-header">Pictures</h5>
-	  <div class="card-body js-collapsed-container collapsed">
+	  <div class="card-body js-collapsed-container js-images-container collapsed">
 			<img class="js-image" src="img/puppy.jpg">
 			<img class="js-image" src="img/1.jpg">
 			<img class="js-image" src="img/2.jpg">
@@ -135,7 +133,7 @@
     <!-- Custom js  -->
     <script src="js/main.js"></script>
     <script src="js/pages/clubs.js"></script>
-	<script src="js/sideBar.js"></script>
+	<!-- <script src="js/sideBar.js"></script> -->
 
 </body>
 </html>
