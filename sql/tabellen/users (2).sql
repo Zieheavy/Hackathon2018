@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2018 at 04:35 PM
+-- Generation Time: Mar 21, 2018 at 09:16 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -40,10 +40,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `Privileges`) VALUES
-(1, 'admin', 'admin', 3),
-(2, 'sportclub', 'sportclub', 2),
-(3, 'coach', 'coach', 1),
-(4, 'parent', 'parent', 0);
+(1, 'admin@gmail.com', 'admin', 3),
+(2, 'sportclub@gmail.com', 'sportclub', 2),
+(3, 'coach@gmail.com', 'coach', 1),
+(4, 'parent@gmail.com', 'parent', 0);
 
 --
 -- Indexes for dumped tables
