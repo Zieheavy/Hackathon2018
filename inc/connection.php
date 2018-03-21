@@ -5,8 +5,6 @@ if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
 
-
-
 if ($resource = mysqli_query($conn," SELECT * FROM coordinaten "))
 {
     while($result = mysqli_fetch_assoc($resource))

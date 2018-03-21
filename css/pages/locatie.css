@@ -1,0 +1,16 @@
+span, h1, .symbool, button{
+    color: var(--primary)!important;
+}
+
+span:hover{
+    color: var(--primary-hover);
+}
+
+article:hover{
+    border-color: var(--primary-hover) !important;
+}
+
+#map{
+    width: 100% !important;
+    height: 1000px !important;
+}
