@@ -1,4 +1,5 @@
 <?php
+  include 'defaults.php';
   session_start();
   session_destroy();
 
@@ -11,8 +12,6 @@
   if(!isset($_SESSION['privileges'])){
     $_SESSION['privileges'] = "";
   }
-
-  $conn =  new mysqli("localhost", "root", "", "businessenergy");
 
   $name = $_POST['username'];
   $password = $_POST['password'];
