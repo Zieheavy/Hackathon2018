@@ -1,7 +1,7 @@
 <?php
   session_start();
-  session_destroy();
 
+session_destroy();
   if(!isset($_SESSION['username'])){
     $_SESSION['username'] = "";
   }

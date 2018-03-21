@@ -52,4 +52,6 @@
 .fa-bars{
     font-size: 40px !important;
     position: absolute;
+    top: 10px;
+    left: 16px;
 }
