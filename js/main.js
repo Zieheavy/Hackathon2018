@@ -65,3 +65,25 @@ function getSession(){
   });
   return sessionArray;
 }
+
+function headerFooter(){
+    $.ajax({ type: "GET",
+       url: "inc/_menu.html",
+       async: false,
+       success : function(text)
+       {
+           var response= text;
+           $('body').prepend(response);
+       }
+    });
+
+    $.ajax({ type: "GET",
+       url: "inc/_footer.html",
+       async: false,
+       success : function(text)
+       {
+           var response= text;
+           $('#main').append(response);
+       }
+    });
+}

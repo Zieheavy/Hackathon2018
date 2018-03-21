@@ -12,7 +12,7 @@
 }
 
 .lesson{
-    width: 40vmin;
+    width: 45vmin;
     height: 7vmin;
     display: inline-block;
 }
@@ -199,7 +199,7 @@
     top: 40%;
 }
 
-.jumbotron {
+.clubsJumbotron {
     margin-bottom: 0px;
     background-image: url(https://sassets.knvb.nl/sites/knvb.nl/files/styles/ls-1920x1080/public/19112692.jpg?itok=smo_kQzd);
     background-position: 0% 25%;
@@ -254,4 +254,3 @@
     font-family: Impact;
     font-size: 30px;
 }
-

@@ -6,6 +6,9 @@ $(document).ready(function(){
   console.log(getUrlParameter('club1'))
   console.log(getUrlParameter('club2'))
 
+  headerFooter();
+  // $('body').append("<div>")
+
   $.post( "inc/getClub.php", {
     club: getUrlParameter('club1')
   }, function(response,status){

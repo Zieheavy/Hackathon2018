@@ -7,6 +7,7 @@ $(document).ready(function(){
   var selected = 0;
 
   getSession();
+  headerFooter();
 
   $.post( "inc/getClub.php", {
     club: getUrlParameter('club')
