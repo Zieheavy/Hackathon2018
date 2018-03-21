@@ -1,5 +1,9 @@
 $(document).ready(function(){
 	console.log('index loaded');
+	console.log();
+	if(getSession().loggedin == 1){
+		loginStyling();
+	}
 
   $('.js-password').bind('keypress', function(e) {
     if(e.keyCode==13){
@@ -126,6 +130,8 @@ $(document).ready(function(){
 			username: $('.js-username').val(),
 			password: $('.js-password').val()
 	  }, function(response,status){
+			console.log(response)
+			getSession();
 			if(response	== "loggedin"){
 		  getSession();
 				loginStyling();

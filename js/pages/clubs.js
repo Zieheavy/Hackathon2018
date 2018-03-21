@@ -80,6 +80,12 @@ $(document).ready(function(){
             $(this).popover('show');
             var id = parseInt($(this).find(".startTime").attr('id').split('_')[1])-1
             setTimeout(function () {
+              console.log(getSession().loggedin )
+              if(getSession().loggedin == 1){
+                $('.reserve').css('display','inline');
+              }else{
+                $('.reserve').css('display','none');
+              }
               $('#pop-title').text(events[id].naam)
               if(parseInt(events[id].ingeschreven) >= parseInt(events[id].deelnemers)){
                 console.log("full")
