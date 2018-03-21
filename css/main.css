@@ -11,6 +11,12 @@
 body{
 	overflow-x: hidden;
 }
+::selection {
+  background: var(--primary); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--primary); /* Gecko Browsers */
+}
 .login-carousel{
     top: 20%;
     width: 18rem;
