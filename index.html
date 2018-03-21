@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/pages/index.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/sideBar.css">
@@ -171,13 +172,23 @@
 	</div>
 
 	<div class="container">
-		<div class="input-group mb-3">
-		  <div class="input-group-prepend">
-		    <span class="input-group-text gradient" id="search">Zoeken<i class="fa fa-search"></i></span>
-		  </div>
-		  <input type="text" class="form-control" placeholder="Zoeken" aria-label="Zoeken" aria-describedby="search">
+		<div class="row">
+			<div class="col-md-3 mx-auto">
+				<h3 class="title">Zoek in de buurt</h3>
+			</div>
+			<div class="col-md-5 mx-auto">
+				<div class="input-group">
+				  	<div class="input-group-prepend">
+					    <span class="input-group-text gradient" id="search">Zoeken<i class="fa fa-search"></i></span>
+				  	</div>
+				  	<input type="text" class="form-control" placeholder="Zoeken" aria-label="Zoeken" aria-describedby="search">
+				</div>
+			</div>
+
+			<div class="col-md-3 mx-auto">
+			<a href="#" class="btn btn-secondary w-100">Gebruik mijn locatie <i class="fa fa-location-arrow"></i></a>
+			</div>
 		</div>
-		<a href="#" class="btn btn-secondary">Gebruik mijn locatie <i class="fa fa-location-arrow"></i></a>
 	</div>
 
 	<div class="jumbotron mb-4 p-0">
