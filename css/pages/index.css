@@ -59,3 +59,11 @@
     -webkit-transform: skew(0deg, -5deg);
     transform: skew(0deg, -5deg);
 }
+
+.clear{
+	opacity: 0;
+	height: 0;
+	width: 0;
+	margin: 0;
+	padding: 0;
+}

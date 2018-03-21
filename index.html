@@ -57,7 +57,7 @@
 				</div>
 				<button type="submit" class="btn btn-primary w-100 js-login">Login</button>
 				<hr>
-				<button type="button" class="btn btn-secondary text-center w-100 js-login-hide" data-toggle="modal" data-target="#exampleModal">Maak een account aan</button>
+				<button type="button" class="btn btn-secondary text-center w-100 js-login-hide js-register-open" data-toggle="modal" data-target="#exampleModal">Maak een account aan</button>
 
 				<!-- Modal -->
 				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -69,34 +69,36 @@
 				          <span aria-hidden="true">&times;</span>
 				        </button>
 				      </div>
-				      <div class="modal-body">
+			      <div class="modal-body">
+						<div class="alert alert-danger js-register-error clear">
+						</div>
 
 						<div class="input-group mb-3 js-login-hide">
 						  <div class="input-group-prepend">
 						    <span class="input-group-text gradient" id="basic-addon1"><i class="fa fa-envelope"></i></span>
 						  </div>
-						  <input type="text" class="form-control js-username" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
+						  <input type="text" class="form-control js-register-username" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
 						</div>
 
 						<div class="input-group mb-3 js-login-hide">
 						  <div class="input-group-prepend">
 						    <span class="input-group-text gradient" id="basic-addon1"><i class="fa fa-lock"></i></span>
 						  </div>
-						  <input type="password" class="form-control js-password" placeholder="Wachtwoord" aria-label="Username" aria-describedby="basic-addon1">
+						  <input type="password" class="form-control js-register-password" placeholder="Wachtwoord" aria-label="Username" aria-describedby="basic-addon1">
 						</div>
 
 						<div class="input-group mb-3 js-login-hide">
 						  <div class="input-group-prepend">
 						    <span class="input-group-text gradient" id="basic-addon1"><i class="fa fa-lock"></i></span>
 						  </div>
-						  <input type="password" class="form-control js-password" placeholder="Herhaal wachtwoord" aria-label="Username" aria-describedby="basic-addon1">
+						  <input type="password" class="form-control js-register-repeat-password" placeholder="Herhaal wachtwoord" aria-label="Username" aria-describedby="basic-addon1">
 						</div>
 
 				      </div>
 
 				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ik heb al een account</button>
-				        <button type="button" class="btn btn-primary">Maak account</button>
+				        <button type="button" class="btn btn-secondary js-register-close" data-dismiss="modal">Ik heb al een account</button>
+				        <button type="button" class="btn btn-primary js-register">Maak account</button>
 				      </div>
 				    </div>
 				  </div>
@@ -181,6 +183,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Custom js  -->
+    <script src="js/main.js"></script>
     <script src="js/pages/index.js"></script>
 </body>
 </html>
