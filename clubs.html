@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" type="text/css" href="css/pages/clubs.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="css/sideBar.css">
 	<title>Hackathon2018</title>
 </head>
@@ -27,12 +28,12 @@
 <!-- Use any element to open the sidenav -->
 
 <div id="main">
-<span id="bars" onclick="openNav()">	
+<span id="bars" onclick="openNav()">
 <i class="fa fa-bars" aria-hidden="true"></i>
 
 </span>
 	<div class="jumbotron">
-	  <h1 class="display-4">Hello, world!</h1>
+	  <h1 class="display-4 js-club-name">Hello, world!</h1>
 	  <p class="lead">This is a simple hero unit, a <simple></simple> jumbotron-style component for calling extra attention to featured content or information.</p>
 	  <hr class="my-4">
 		<button type="button" class="btn btn-primary js-club">De club</button>
@@ -80,6 +81,34 @@
 	<div class="card">
 		<h5 class="card-header">Events</h5>
 	  <div class="card-body">
+			<div class="lesson" data-toggle="popover" data-placement="top" data-html="true" data-content="
+				<img src='img/puppy.jpg' class='popoverImage'>
+				<div class='title'>Event Event Evenets</div>
+				<i class='fa fa-circle positive' aria-hidden='true'></i>
+				<div class='iconInformation'>Er zijn plaatsen vrij</div>
+				<div class='reserve' id='js-reserve_1'>Reserve</div>
+			">
+				<div class="lessonLeft">
+					<div class="startTime">09:00</div>
+					<div class="devider">-</div>
+					<div class="finishTime">11:00</div>
+				</div>
+				<div class="lessonRight">
+					<div class="name">event</div>
+					<div class="extra">bary</div>
+				</div>
+        <!-- <div class="times">
+          <span>10:00</span> ‐
+
+          <span>11:00</span>
+        </div> -->
+        <!-- <div>
+          <strong itemprop="name">
+            BodyPump          </strong>
+          <span itemprop="attendee">
+              Esther          </span>
+        </div> -->
+      </div>
 	  </div>
 	</div>
 
@@ -102,6 +131,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Custom js  -->
+    <script src="js/main.js"></script>
     <script src="js/pages/clubs.js"></script>
 	<script src="js/sideBar.js"></script>
 

@@ -1,6 +1,20 @@
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 $(document).ready(function(){
   var images = [];
   var selectedImage = 0;
+  var club;
+
+  $.post( "inc/getClub.php", {
+    club: getUrlParameter('club')
+  }, function(response,status){
+    console.log(JSON.parse(response))
+    club = JSON.parse(response)[0];
+    console.log(club.naam)
+    $('.js-club-name').text(club.naam)
+    $('.js-club-info').text(club.info)
+  });
 
   $("#js-toggle-collapsed").click(function() {
     var elem = $("#js-toggle-collapsed").text();
@@ -55,4 +69,9 @@ $(document).ready(function(){
     $('#myModal').css('display','none')
   })
 
+  $('body').on('click','#js-reserve_1',function(){
+  // $('#js-reserve_1').on('click',function(){
+    console.log('click')
+    window.location.replace("index.html?event=1");
+  })
 });

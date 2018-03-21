@@ -1,15 +1,20 @@
 $(document).ready(function(){
 	console.log('index loaded');
 
+  $('.js-password').bind('keypress', function(e) {
+    if(e.keyCode==13){
+			login()
+    }
+  });
+
+  $('.js-register-repeat-password').bind('keypress', function(e) {
+    if(e.keyCode==13){
+			register();
+    }
+  });
+
   $('body').on('click','.js-login',function(){
-		$.post( "inc/login.php", {
-			username: $('.js-username').val(),
-			password: $('.js-password').val()
-	  }, function(response,status){
-			if(response	== "loggedin"){
-				login();
-			}
-	  });
+		login()
 	})
 
 
@@ -38,6 +43,10 @@ $(document).ready(function(){
 	})
 
 	$('.js-register').on('click',function(){
+		register();
+	})
+
+	function register(){
 		var count = 0;
 		var alertMessage = "";
 		var username = $('.js-register-username').val();
@@ -81,7 +90,7 @@ $(document).ready(function(){
 							console.log(response)
 							if(response	== "succes"){
 	   						$('#exampleModal').modal('toggle');
-								login()
+								loginStyling()
 							}
 					  });
 					}
@@ -102,7 +111,7 @@ $(document).ready(function(){
 			$('.js-register-error').removeClass('clear')
 			$('.js-register-error').html (alertMessage)
 		}
-	})
+	}
 
 	function resetRegister(){
 		$('.js-register-error').addClass('clear')
@@ -112,12 +121,22 @@ $(document).ready(function(){
 	}
 
 	function login(){
+		$.post( "inc/login.php", {
+			username: $('.js-username').val(),
+			password: $('.js-password').val()
+	  }, function(response,status){
+			if(response	== "loggedin"){
+				loginStyling();
+			}
+	  });
+	}
+
+	function loginStyling(){
 		$('.js-login-title').text('logged in')
 		$('.js-login-hide').css('opacity','0')
 		$('.js-login').text('Logout')
 		$('.js-login').addClass('js-logout')
 		$('.js-login').removeClass('js-login')
 	}
+
 });
-
-
