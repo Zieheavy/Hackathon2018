@@ -141,7 +141,6 @@ body{
 .fa-bars:hover{
 	color: var(--primary-hover);
 }
-=======
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -213,3 +212,6 @@ body{
     color: var(--primary-hover);
 }
 
+.btn:focus{
+	outline: none !important;
+	box-shadow: none;}
