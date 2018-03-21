@@ -73,16 +73,18 @@ $(document).ready(function(){
 			}
 			if(password.length > 3){
 				if(password == repeatPassword){
-					$.post( "inc/register.php", {
-						username: $('.js-register-username').val(),
-						password: $('.js-register-password').val()
-				  }, function(response,status){
-						console.log(response)
-						if(response	== "succes"){
-   						$('#exampleModal').modal('toggle');
-							login()
-						}
-				  });
+					if(username.indexOf('@') != -1 || username.indexOf('.') != -1){
+						$.post( "inc/register.php", {
+							username: $('.js-register-username').val(),
+							password: $('.js-register-password').val()
+					  }, function(response,status){
+							console.log(response)
+							if(response	== "succes"){
+	   						$('#exampleModal').modal('toggle');
+								login()
+							}
+					  });
+					}
 				}else{
 					alertMessage += "- your passwords are not the same<br>"
 					$('.js-register-repeat-password').css("border","2px solid red")
