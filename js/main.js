@@ -30,3 +30,24 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+
+var attrs = ['id'];
+function resetAttributeNames(section) {
+    var tags = section.find('div, data-toggle'), idx = section.index();
+    tags.each(function() {
+      var $this = $(this);
+      $.each(attrs, function(i, attr) {
+        var attr_val = $this.attr(attr);
+        if (attr_val) {
+          $this.attr(attr, attr_val.replace(/_\d+$/, '_'+(idx + 1)))
+        }
+      })
+    })
+}
+
+function repeatItem(repeatedClass){
+  var lastRepeatingGroup = $('.'+repeatedClass+'').last();
+  var cloned = lastRepeatingGroup.clone(true)
+  cloned.insertAfter(lastRepeatingGroup);
+  resetAttributeNames(cloned)
+}

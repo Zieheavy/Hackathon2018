@@ -1,11 +1,9 @@
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
 $(document).ready(function(){
   var selectedImage = 0;
   var club;
   var info;
   var images;
+  var events;
 
   $.post( "inc/getClub.php", {
     club: getUrlParameter('club')
@@ -45,6 +43,76 @@ $(document).ready(function(){
     for(var i = 0; i < images.length; i++){
       console.log(images[i].url)
       $('.js-images-container').append("<img class='js-image' src='img/" + images[i].url + "'>")
+    }
+  });
+
+  $.post( "inc/getEvents.php", {
+    club: getUrlParameter('club')
+  }, function(response,status){
+    console.log(JSON.parse(response))
+    events = JSON.parse(response);
+    console.log(events)
+    $('.js-images-container').text('')
+    for(var i = 1; i < events.length; i++){
+      repeatItem('lesson')
+    }
+    var temp = "";
+    temp += "<img src='img/puppy.jpg' class='popoverImage'>"
+    temp += "<div class='title' id='pop-title'>Event Event Evenets</div>"
+    temp += "<i class='fa fa-circle positive' aria-hidden='true'></i>"
+    temp += "<div class='iconInformation'>Er zijn plaatsen vrij</div>"
+    temp += "<div class='reserve' id='js-reserve_1'>Reserve</div>"
+    for(var i = 0; i < events.length; i++){
+      $('#startTime_'+(i+1)).text(events[i].startdatum)
+      $('#finishTime_'+(i+1)).text(events[i].einddatum)
+      $('#title_'+(i+1)).text(events[i].naam)
+      $('#name_'+(i+1)).text(events[i].person)
+    }
+    $(function () {
+        $('.lesson').popover({
+            html: true,
+            placement: 'top',
+            content: temp
+        }).click(function(e) {
+            $('.lesson').popover('hide');
+            $(this).popover('show');
+            var id = parseInt($(this).find(".startTime").attr('id').split('_')[1])-1
+            setTimeout(function () {
+              $('#pop-title').text(events[id].naam)
+              if(parseInt(events[id].ingeschreven) >= parseInt(events[id].deelnemers)){
+                console.log("full")
+                $('.fa-circle').css('color','red')
+                $('.iconInformation').text('er zijn geen plaatsen meer')
+              }else if(Math.floor(parseInt(events[id].deelnemers)/100*90) <= parseInt(events[id].ingeschreven)){
+                console.log("almost full")
+                $('.fa-circle').css('color','orange')
+                $('.iconInformation').text('er zijn weinig plaatsen')
+              }else{
+                console.log("space")
+                $('.fa-circle').css('color','green')
+                $('.iconInformation').text('Er zijn plaatsen vrij')
+              }
+            }, 10);
+            clickedAway = false
+            isVisible = true
+            e.preventDefault()
+        });
+    });
+  });
+
+  var isVisible = false;
+  var clickedAway = false;
+
+  $(document).click(function(e) {
+    console.log("click")
+    if(isVisible & clickedAway)
+    {
+      $('.lesson').popover('hide')
+      isVisible = clickedAway = false
+    }
+    else
+    {
+      clickedAway = true
     }
   });
 

@@ -12,7 +12,7 @@
 }
 
 .lesson{
-    width: 30vmin;
+    width: 40vmin;
     height: 7vmin;
     display: inline-block;
 }
@@ -27,6 +27,7 @@
   justify-content: space-around;
   align-items: center;
   color: white;
+  flex-direction: column;
 }
 .lessonRight{
   display: inline-block;
@@ -47,11 +48,13 @@
 }
 .startTime{
   display: inline-block;
-  width: 40%;
+  width: 100%;
+  height: 50%;
 }
 .finishTime{
   display: inline-block;
-  width: 40%;
+  width: 100%;
+  height: 50%;
 }
 .devider{
   width: 6%;
@@ -80,18 +83,6 @@
   position: absolute;
   bottom: 0.5vmin;
   left: 1vmin;
-}
-.positive{
-  color: green;
-  margin-left: 1vmin;
-}
-.neutral{
-  color: orange;
-  margin-left: 1vmin;
-}
-.negative{
-  color: red;
-  margin-left: 1vmin;
 }
 .iconInformation{
   display: inline-block;
