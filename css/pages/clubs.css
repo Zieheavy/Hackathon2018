@@ -206,6 +206,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    height: 50vh;
 }
 
 .button1{
@@ -224,6 +225,15 @@
     margin-left: -10px;
     margin-right: -10px;
     z-index: 1;
+    border:0px solid transparent; /* this was 1px earlier */
+}
+
+
+
+.button2 span{
+    -moz-text-replace: skew( 15deg, 0deg);
+    -ms-text-replace: skew( 15deg, 0deg);
+    text-replace: skew( 15deg, 0deg);
 }
 
 .button3{
@@ -232,3 +242,18 @@
     border-radius: 0px !important;
     z-index: 0;
 }
+
+.skewbuttons{
+    margin-left: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Head{
+    color: var(--primary);
+    font-family: Impact;
+    font-size: 30px;
+}
+
+
+
