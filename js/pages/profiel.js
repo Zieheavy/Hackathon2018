@@ -1,9 +1,20 @@
 $(document).ready(function(){
   console.log("profile loaded")
-  console.log()
-  setTimeout(function () {
-    $('#title').text("welcome " + getSession().username)
-  }, 10);
+  var rating = "";
+  $(".rating-dynamish").starRating({
+    starSize: 25,
+    hoverColor: '#ff5e00',
+    activeColor: '#F55922',
+    starSize: 40,
+    starGradient: {
+        start: '#2E428A',
+        end: '#1A2659'
+    },
+    // readOnly: true,
+    callback: function(currentRating, $el){
+      rating = currentRating
+    }
+  })
 
   $.post( "inc/getEvent.php", {
     id: getUrlParameter('id')
@@ -22,5 +33,19 @@ $(document).ready(function(){
       $('#name_'+i).text(club[i-1].person)
     }
   });
+
+  $('.js-rating').on('click',function(){
+    console.log($('.js-rating-text').val());
+    console.log(rating)
+    console.log(getSession().username)
+
+    $.post( "inc/ratingCoach.php", {
+      rating: rating,
+      comment: $('.js-rating-text').val(),
+      coach: 1,
+      username: getSession().username
+    }, function(response,status){
+    });
+  })
 
 });

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/star-rating-svg.css">
     <link rel="stylesheet" type="text/css" href="css/pages/profiel.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -64,8 +65,8 @@
 				<div class="col-md-6 mb-4">
 					<div class="card m-auto" style="max-width: 25rem;">
 					  <img class="card-img-top" src="http://www.apwc.nl/wp-content/uploads/2017/08/20-euro-clinic-1.jpg" alt="Card image cap">
-					  <h1 class="text-center"><i class="fa fa-star ml-1 mr-1"></i><i class="fa fa-star ml-1 mr-1"></i><i class="fa fa-star ml-1 mr-1"></i><i class="fa fa-star ml-1 mr-1"></i><i class="fa fa-star ml-1 mr-1"></i></h1>
-					  <div class="card-body">
+							<div class="rating-static rating"></div>
+							<div class="card-body">
 					    <h5 class="card-title">Laatste review van trainer</h5>
 					    <p class="card-text">Maarten je moet je meer gaan fucussen op je conditie voor de rest gaat alles prima.</p>
 					  </div>
@@ -76,12 +77,13 @@
 					<div class="card m-auto" style="max-width: 88%;">
 					  <h3 class="card-title pl-3 gradient pb-2">Laat ons weten wat je van de training vond</h3>
 					  <div class="card-body">
-					    <h5 class="card-title">!Star rating hier!</h5>
+							<div class="rating-dynamish card-title rating"></div>
 					    <div class="input-group">
 						  <div class="input-group-prepend">
 						    <span class="input-group-text gradient-hover">Wat vond je van de training</span>
 						  </div>
-						  <textarea class="form-control" aria-label="With textarea"></textarea>
+						  <textarea class="form-control js-rating-text" aria-label="With textarea"></textarea>
+							<button type="button" class="btn btn-primary js-rating">submit</button>
 						</div>
 					  </div>
 					</div>
@@ -98,6 +100,7 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="js/jquery.star-rating-svg.js"></script>
     <!-- Custom js  -->
     <script src="js/main.js"></script>
     <script src="js/pages/profiel.js"></script>
