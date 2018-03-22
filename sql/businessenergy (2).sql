@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2018 at 07:26 PM
+-- Generation Time: Mar 22, 2018 at 09:27 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `businessenergy`
 --
+CREATE DATABASE IF NOT EXISTS `businessenergy` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `businessenergy`;
 
 -- --------------------------------------------------------
 
@@ -58,23 +60,28 @@ CREATE TABLE `coordinaten` (
   `id` int(11) NOT NULL,
   `voetbalschool_id` int(11) NOT NULL,
   `lat` double NOT NULL,
-  `lng` double NOT NULL
+  `lng` double NOT NULL,
+  `voetbalschool_naam` text NOT NULL,
+  `voetbalschool_adres` text NOT NULL,
+  `voetbalschool_email` text NOT NULL,
+  `voetbalschool_postcode` text NOT NULL,
+  `voetbalschool_img` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `coordinaten`
 --
 
-INSERT INTO `coordinaten` (`id`, `voetbalschool_id`, `lat`, `lng`) VALUES
-(15, 1, 51.4391442, 5.4805866),
-(16, 2, 53.2179036, 6.5661601),
-(17, 3, 52.9932474, 6.5626143),
-(18, 4, 52.961156, 5.9227026),
-(19, 5, 51.9857548, 5.8988354),
-(20, 6, 50.9985058, 5.8752279),
-(21, 7, 52.3701772, 4.8962924),
-(22, 10, 51.8939096, 4.5233566),
-(23, 14, 51.4862149, 5.6800712);
+INSERT INTO `coordinaten` (`id`, `voetbalschool_id`, `lat`, `lng`, `voetbalschool_naam`, `voetbalschool_adres`, `voetbalschool_email`, `voetbalschool_postcode`, `voetbalschool_img`) VALUES
+(15, 1, 51.4391442, 5.4805866, 'PSV', 'Wijde Kerkstraat 5', 'info@philips.nl', '5707 AS Eindhoven', 'img/vestigingen/1.png'),
+(16, 2, 53.2179036, 6.5661601, 'FC Groningen', 'Frans Handers 78', 'info@fcgroningen.nl', '9631 DF Groningen', 'img/vestigingen/2.png'),
+(17, 3, 52.9932474, 6.5626143, 'FC Assen', 'Peperstraat 123', 'info@fcassen.nl', '8951 DD Assen', 'img/vestigingen/3.png'),
+(18, 4, 52.961156, 5.9227026, 'FC Heerenveen', 'Engestraat 666', 'info@fcheerenveen.nl', '7527 ED Heerenveen', 'img/vestigingen/4.png'),
+(19, 5, 51.9857548, 5.8988354, 'FC Arnhem', 'De Goorloper 1', 'info@vcgelderland.nl', '9624 BB Arnhem', 'img/vestigingen/5.png'),
+(20, 6, 50.9985058, 5.8752279, 'FC Sittard', 'Zondestraat 90', 'info@fcsittard.nl', '1212 CD Sittard', 'img/vestigingen/6.png'),
+(21, 7, 52.3701772, 4.8962924, 'AJAX', 'De Plein 85', 'info@ajax.nl', '3695 CQ Amsterdam', 'img/vestigingen/7.png'),
+(22, 10, 51.8939096, 4.5233566, 'Feyenoord', 'De Kuip 1', 'info@feyenoord.nl', '9694 AA Rotterdam', 'img/vestigingen/8.png'),
+(23, 14, 51.4862149, 5.6800712, 'Helmond Sport', 'Helmondstraat 1', 'info@helmondsport.nl', '9999 KK Helmond', 'img/vestigingen/9.png');
 
 -- --------------------------------------------------------
 
@@ -137,36 +144,6 @@ INSERT INTO `fotosenvideos` (`id`, `url`, `voedbalschool_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `provincies`
---
-
-CREATE TABLE `provincies` (
-  `id` int(11) NOT NULL,
-  `naam` text NOT NULL,
-  `afkorting` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `provincies`
---
-
-INSERT INTO `provincies` (`id`, `naam`, `afkorting`) VALUES
-(1, 'Groningen', 'GR'),
-(2, 'Drenthe', 'DR'),
-(3, 'Friesland', 'FR'),
-(4, 'Gelderland', 'GD'),
-(5, 'Limburg', 'LB'),
-(6, 'Noord-Brabant', 'NB'),
-(7, 'Noord-Holland', 'NH'),
-(8, 'Overijssel', 'OV'),
-(9, 'Utrecht', 'UT'),
-(10, 'Zuid-Holland', 'ZH'),
-(11, 'Zeeland', 'ZL'),
-(12, 'Flevoland', 'FL');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `users`
 --
 
@@ -204,7 +181,6 @@ INSERT INTO `users` (`id`, `name`, `password`, `Privileges`) VALUES
 CREATE TABLE `voetbalscholen` (
   `id` int(11) NOT NULL,
   `naam` text NOT NULL,
-  `provincie_id` int(11) NOT NULL,
   `leden` int(11) NOT NULL,
   `info` varchar(1000) NOT NULL,
   `Location` varchar(100) NOT NULL,
@@ -218,10 +194,10 @@ CREATE TABLE `voetbalscholen` (
 -- Dumping data for table `voetbalscholen`
 --
 
-INSERT INTO `voetbalscholen` (`id`, `naam`, `provincie_id`, `leden`, `info`, `Location`, `Traningen`, `Trainers`, `Review`, `price`) VALUES
-(1, 'PSV', 6, 455, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.', 'eindhoven', '5', '5', 1.9, 99.99),
-(2, 'AJAX', 1, 234, 'Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', 'amsterdam', '4', '5', 4.5, 199.50),
-(3, 'SVS Stevensbeek', 6, 20, 'tiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.', 'stevensbeek', '4', '5', 3.3, 50.00);
+INSERT INTO `voetbalscholen` (`id`, `naam`, `leden`, `info`, `Location`, `Traningen`, `Trainers`, `Review`, `price`) VALUES
+(1, 'PSV', 455, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.', 'eindhoven', '5', '5', 1.9, 99.99),
+(2, 'AJAX', 234, 'Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.', 'amsterdam', '4', '5', 4.5, 199.50),
+(3, 'SVS Stevensbeek', 20, 'tiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.', 'stevensbeek', '4', '5', 3.3, 50.00);
 
 --
 -- Indexes for dumped tables
@@ -249,12 +225,6 @@ ALTER TABLE `events`
 -- Indexes for table `fotosenvideos`
 --
 ALTER TABLE `fotosenvideos`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `provincies`
---
-ALTER TABLE `provincies`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -293,11 +263,6 @@ ALTER TABLE `events`
 --
 ALTER TABLE `fotosenvideos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `provincies`
---
-ALTER TABLE `provincies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `users`
 --
