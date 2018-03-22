@@ -11,13 +11,10 @@ $(document).ready(function(){
   headerFooter();
 
   $.post( "inc/getClub.php", {
-    club: getUrlParameter('club')
+    club: getUrlParameter('id')
   }, function(response,status){
     console.log(JSON.parse(response))
     club = JSON.parse(response)[0];
-    $('.js-club-name').text(club.naam)
-    $('.js-club-info').text(club.info)
-    $('#js-club-info-input').val(club.info)
   });
 
   $.post( "inc/getTrainingen.php", {
