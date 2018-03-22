@@ -21,7 +21,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
         sURLVariables = sPageURL.split('&'),
         sParameterName,
         i;
-        console.log(sURLVariables)
 
     for (i = 0; i < sURLVariables.length; i++) {
         sParameterName = sURLVariables[i].split('=');
@@ -65,4 +64,26 @@ function getSession(){
     sessionArray = JSON.parse(response);
   });
   return sessionArray;
+}
+
+function headerFooter(){
+    $.ajax({ type: "GET",
+       url: "inc/_menu.html",
+       async: false,
+       success : function(text)
+       {
+           var response= text;
+           $('body').prepend(response);
+       }
+    });
+
+    $.ajax({ type: "GET",
+       url: "inc/_footer.html",
+       async: false,
+       success : function(text)
+       {
+           var response= text;
+           $('#main').append(response);
+       }
+    });
 }
