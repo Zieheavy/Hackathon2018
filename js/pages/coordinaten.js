@@ -185,8 +185,8 @@ function initMap(){
                 x.innerHTML = "Latitude: " + position.coords.latitude +  "<br>Longitude: " + position.coords.longitude;
 
                 $.each(arrayLocations, function(i, item) {
-                    var verschilLat = position.coords.latitude - item.lat;
-                    var verschilLng = position.coords.longitude - item.lng;
+                    var verschilLat = item.lat - position.coords.latitude;
+                    var verschilLng = item.lng - position.coords.longitude;
                     obj[item.id] = {itemid: i, corddiff: verschilLat + verschilLng, voetbalschool: item.id}
                 });
 
@@ -204,7 +204,7 @@ function initMap(){
 
 
 
- /*               function getDistanceFromLatLonInKm(position.coords.latitude,position.coords.longitude,item.lat,item.lng) { // hier ben ik
+                function getDistanceFromLatLonInKm() { // hier ben ik
                     var R = 6371; // Radius of the earth in km
                     var dLat = deg2rad(lat2-lat1);  // deg2rad below
                     var dLon = deg2rad(lon2-lon1);
@@ -220,7 +220,7 @@ function initMap(){
 
                 function deg2rad(deg) {
                     return deg * (Math.PI/180)
-                }*/
+                }
 
 
             }
