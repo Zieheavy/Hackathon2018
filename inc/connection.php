@@ -20,5 +20,12 @@ else
 
 
 if (isset($_POST['verstuur_training'])){
-    $conn->query("INSERT INTO `projecten` VALUES (NULL, '{$_POST['training_naam']}', NULL, '{$_POST['training_omschrijving']}', NOW(), NULL, '{$_POST['training_taal']}', '{$_POST['training_docent']}' )  ");
+    if($conn->query(" INSERT INTO `trainingen` VALUES ('{$_POST['training_naam']}', '{$_POST['training_kosten']}', '{$_POST['training_van']}', '{$_POST['training_tot']}', '{$_POST['training_min']}', '{$_POST['training_max']}', '{$_POST['training_omschrijving']}', '{$_SESSION['sportClubId']}', '{$_SESSION['naam']}', NULL, '{$_POST['training_name']}', '{$_POST['training_type']}', '{$_POST['training_datum']}') ")){
+        echo "good";
+    }
+    else
+    {
+        echo "There is a problem:"; // Message says that there is a problem.
+        die(mysqli_error($conn)); // Shows the $connect variable.
+    }
 }

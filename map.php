@@ -24,81 +24,84 @@
     <link type="text/css" rel="stylesheet" href="https://www.fitforfree.nl/sites/fitforfree.nl/files/css/css_lhx95E5DTL6D4aZzkAgaRyi9nQwrqgPhF2pW3x3DD7A.css" media="all">
 </head>
 <body>
+<?php include ("inc/_menu.html"); ?>
 
-<div class="results-wrapper">
-    <div id="block-generic-club-club-overview-intro" class="block block-generic-club">
+<div id="main">
+    <div class="results-wrapper">
+        <div id="block-generic-club-club-overview-intro" class="block block-generic-club">
 
-        <div class="content">
-            <h1>9 voetbalscholen in heel Nederland!</h1>
+            <div class="content">
+                <h1>9 voetbalscholen in heel Nederland!</h1>
+            </div>
         </div>
-    </div>
 
-    <div id="block-views-exp-clubs-page" class="block block-views block-light row-space-bottom">
+        <div id="block-views-exp-clubs-page" class="block block-views block-light row-space-bottom">
 
-        <div class="content">
-            <form action="clubs.html?club=" method="GET" id="views-exposed-form-clubs-page" accept-charset="UTF-8"><div>
-                    <div class="col-xs-12 no-padding">
+            <div class="content">
+                <form action="clubs.html?club=" method="GET" id="views-exposed-form-clubs-page" accept-charset="UTF-8"><div>
                         <div class="col-xs-12 no-padding">
-                            <button type="button" class="use-location huidigeLocatie">Zoek het dichbijzijnste voetbalschool</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div id="block-system-main" class="block block-system">
-
-        <div class="content">
-            <div class="view view-clubs view-id-clubs view-display-id-page view-dom-id-7de267cd343933743c756acfce59bda6">
-                <div class="view-content">
-                    <?php foreach($coordinaten as $coordinaat){?>
-                                <div class="even">
-                                    <article class="block-light location-result col-xs-12 no-padding" itemscope="" itemtype="https://schema.org/ExerciseGym">
-                                        <a itemprop="url" href="clubs.html?club=<?=$coordinaat['voetbalschool_id']?>">
-                                            <div class="info-wrap">
-                                                <h2><span class="voetbalschool_naam" value="<?=$coordinaat['voetbalschool_naam']?>" itemprop="name"><?=$coordinaat['voetbalschool_naam']?></span></h2>
-                                                <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                                                    <div><span itemprop="streetAddress"><?=$coordinaat['voetbalschool_adres']?> - <?=$coordinaat['voetbalschool_postcode']?></span></div>
-                                                </div>
-                                            </div>
-                                            <div class="field field-name-field-club-in-de-buurt-foto field-type-image field-label-hidden">
-                                                <div class="field-items">
-                                                    <div class="field-item even">
-                                                        <picture title="sportschool Fit For Free Amersfoort">
-                                                            <img src="<?=$coordinaat['voetbalschool_img']?>" alt="sportschool Fit For Free Amersfoort" title="sportschool Fit For Free Amersfoort">
-                                                        </picture>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="clear"></div>
-                                        </a>
-                                    </article>
-                                </div>
-                   <?php } ?>
-                </div>
-
-                <div id="coordinaten"></div>
-
-                <div id="myModal" class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-
-                            <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <div id="topDrieLocaties">
-
-                                </div>
+                            <div class="col-xs-12 no-padding">
+                                <button type="button" class="use-location huidigeLocatie">Zoek het dichbijzijnste voetbalschool</button>
                             </div>
-
                         </div>
                     </div>
-                </div>
+                </form>
+            </div>
+        </div>
+        <div id="block-system-main" class="block block-system">
 
-                <div class="view view-clubs view-id-clubs view-display-id-attachment_1">
-                    <div class="map hidden-xs hidden-sm">
-                        <div class="ip-geoloc-map leaflet-view markers">
-                            <div id="map"></div>
+            <div class="content">
+                <div class="view view-clubs view-id-clubs view-display-id-page view-dom-id-7de267cd343933743c756acfce59bda6">
+                    <div class="view-content">
+                        <?php foreach($coordinaten as $coordinaat){?>
+                            <div class="even">
+                                <article class="block-light location-result col-xs-12 no-padding" itemscope="" itemtype="https://schema.org/ExerciseGym">
+                                    <a itemprop="url" href="clubs.html?club=<?=$coordinaat['voetbalschool_id']?>">
+                                        <div class="info-wrap">
+                                            <h2><span class="voetbalschool_naam" value="<?=$coordinaat['voetbalschool_naam']?>" itemprop="name"><?=$coordinaat['voetbalschool_naam']?></span></h2>
+                                            <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                                <div><span itemprop="streetAddress"><?=$coordinaat['voetbalschool_adres']?> - <?=$coordinaat['voetbalschool_postcode']?></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="field field-name-field-club-in-de-buurt-foto field-type-image field-label-hidden">
+                                            <div class="field-items">
+                                                <div class="field-item even">
+                                                    <picture title="sportschool Fit For Free Amersfoort">
+                                                        <img src="<?=$coordinaat['voetbalschool_img']?>" alt="sportschool Fit For Free Amersfoort" title="sportschool Fit For Free Amersfoort">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </a>
+                                </article>
+                            </div>
+                        <?php } ?>
+                    </div>
 
+                    <div id="coordinaten"></div>
+
+                    <div id="myModal" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <div id="topDrieLocaties">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="view view-clubs view-id-clubs view-display-id-attachment_1">
+                        <div class="map hidden-xs hidden-sm">
+                            <div class="ip-geoloc-map leaflet-view markers">
+                                <div id="map"></div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -106,7 +109,7 @@
         </div>
     </div>
 </div>
-
+<?php include ("inc/_footer.html"); ?>
 
 	<!-- jQuery&bootstrap -->
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -130,6 +133,7 @@
     <script src="js/pages/coordinaten.js"></script>
     <script src="js/bootbox.min.js"></script>
     <script src="js/bootbox.js"></script>
+    <script src="js/sidebar.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmSWC5wi4lIC6li0O85M_ITdyCprP76V0&callback=initMap"></script>
 
 </body>
