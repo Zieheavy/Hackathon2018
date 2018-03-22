@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/star-rating-svg.css">
     <link rel="stylesheet" type="text/css" href="css/pages/profiel.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -75,7 +76,7 @@
 			      <div class="modal-body">
 			      	<form>
 				      	<ul class="list-unstyled">
-					      	<li>	
+					      	<li>
 					          <input class="form-check-input radio" type="radio" id="defaultCheck1" name="redeAflassen">
 							  <label class="form-check-label radio-label" for="defaultCheck1">
 							    Weer omstandigheden
@@ -139,12 +140,13 @@
 					</div>
 			      </th>
 			      	<td>
-			      		<p>!rating sytem!</p>
+							<div class="rating-dynamis rating"></div>
 			      	<div class="input-group">
 						  <div class="input-group-prepend">
 						    <span class="input-group-text gradient-hover">waar kan deze speler zich nog in verbeteren</span>
 						  </div>
-						  <textarea class="form-control" aria-label="With textarea"></textarea>
+						  <textarea class="form-control js-text" aria-label="With textarea"></textarea>
+							<button type="button" class="btn btn-primary js-rating">submit</button>
 						</div>
 					</td>
 			    </tr>
@@ -159,9 +161,10 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="js/jquery.star-rating-svg.js"></script>
     <!-- Custom js  -->
     <script src="js/main.js"></script>
-    <script src="js/pages/index.js"></script>
+    <script src="js/pages/profielscholen.js"></script>
 	<script src="js/sideBar.js"></script>
 </body>
 </html>
