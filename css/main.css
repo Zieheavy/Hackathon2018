@@ -56,6 +56,10 @@ a:hover{
 	background: var(--gradient);
 	color: white;
 }
+.gradient-hover{
+	background: var(--gradient-hover);
+	color: white;
+}
 .title{
 	font-weight:300;
 }
