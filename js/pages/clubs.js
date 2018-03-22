@@ -6,7 +6,7 @@ $(document).ready(function(){
   var events;
   var selected = 0;
 
-  getSession();
+  console.log(getSession())
   headerFooter();
 
   $.post( "inc/getClub.php", {
@@ -16,6 +16,7 @@ $(document).ready(function(){
     club = JSON.parse(response)[0];
     $('.js-club-name').text(club.naam)
     $('.js-club-info').text(club.info)
+    $('#js-club-info-input').val(club.info)
   });
 
   $.post( "inc/getInfo.php", {
@@ -26,12 +27,20 @@ $(document).ready(function(){
     console.log(info)
     if(info.length >= 1){
       $('#js-info-title_1').text(info[0].title)
+      $('#js-info-input-title_1').val(info[0].title)
       $('#js-info_1').text(info[0].content)
+      $('#js-info-id').text(info[0].id)
+      $('#js-input-info_1').val(info[0].content)
       if(info.length >= 2){
         $('.js-more-info').removeClass('clear')
         for(var i = 1; i < info.length; i++){
-          $('.js-collapsed').append("<h1>" + info[i].title + "</h1>")
-          $('.js-collapsed').append("<p>" + info[i].content + "</p>")
+          $('.js-collapsed').append("<h1 class='toggleHide'>" + info[i].title + "</h1>")
+          $('.js-collapsed').append("<input type='text' class='form-control toggleHide hide' id='delete-title-info_"+i+"' value='" + info[i].title + "'>")
+          $('.js-collapsed').append("<p class='toggleHide'>" + info[i].content + "</p>")
+          $('.js-collapsed').append("<textarea class='form-control toggleHide hide' id='delete-textarea-info_"+i+"'>" + info[i].content + "</textarea>")
+          $('.js-collapsed').append("<button type='button' class='btn btn-primary js-delete-info toggleHide hide' >delete</button>")
+          $('.js-collapsed').append("<button type='button' class='btn btn-primary js-update-infos toggleHide hide' id='update-text-info_"+i+"'>update</button>")
+          $('.js-collapsed').append("<p class='hide' id='js-info-update-id_"+i+"'>"+info[i].id+"</p>")
         }
       }
     }
@@ -110,11 +119,16 @@ $(document).ready(function(){
     });
   });
 
+  setTimeout(function () {
+    if(getSession().sportClubId == getUrlParameter('club')){
+      $('.toggleHide').toggleClass('hide')
+    }
+  }, 10);
+
   var isVisible = false;
   var clickedAway = false;
 
   $(document).click(function(e) {
-    console.log("click")
     if(isVisible & clickedAway)
     {
       $('.lesson').popover('hide')
@@ -125,6 +139,43 @@ $(document).ready(function(){
       clickedAway = true
     }
   });
+
+  $(".js-add-info").on('click',function(){
+    $("#js-toggle-collapsed").text("Read Less");
+    $(".js-collapsed").slideDown();
+    console.log("click")
+    info.push("#")
+    // console.log($('.js-delete-info').last().attr("id"))
+    var id = parseInt($('.js-update-infos').last().attr("id").split("_")[1])+1
+    $('.js-collapsed').append("<input type='text' class='form-control toggleHide' id='delete-title-info_"+id+"' value=''>")
+    $('.js-collapsed').append("<textarea class='form-control toggleHide' id='delete-textarea-info_"+id+"'></textarea>")
+    $('.js-collapsed').append("<button type='button' class='btn btn-primary js-delete-info toggleHide' >delete</button>")
+    $('.js-collapsed').append("<button type='button' class='btn btn-primary js-update-infos toggleHide' id='update-text-info_"+id+"'>save</button>")
+    $('.js-collapsed').append("<p class='hide' id='js-info-update-id_"+id+"'></p>")
+  })
+
+  $('body').on('click','.js-delete-info',function(){
+    if($(this).attr('id') != "delete_info"){
+      var id = $(this).attr('id').split("_")[1];
+      $('#delete-title-info'+id).remove();
+      $('#delete-textarea-info_'+id).remove();
+      $('#delete-text-info_'+id).remove();
+    }
+  })
+
+  $('#save_info').on('click',function(){
+    console.log($('#js-info-input-title_1').val())
+    console.log($('#js-input-info_1').val())
+    console.log($('#js-info-id').text())
+
+    $.post( "inc/updateInfo.php", {
+      title: $('#js-info-input-title_1').val(),
+      content: $('#js-input-info_1').val(),
+      id: $('#js-info-id').text()
+    }, function(response,status){
+      console.log(response)
+    });
+  })
 
   $("#js-toggle-collapsed").click(function() {
     var elem = $("#js-toggle-collapsed").text();
@@ -138,6 +189,40 @@ $(document).ready(function(){
       $(".js-collapsed").slideUp();
     }
   });
+
+  $('body').on('click','.js-update-infos',function(){
+    var id = $(this).attr('id').split("_")[1]
+    console.log(id)
+    if($('#js-info-update-id_'+id).text() == "")
+    {
+    console.log($('#delete-title-info_'+id).val())
+    console.log($('#delete-textarea-info_'+id).val())
+    console.log(getUrlParameter('club'))
+    console.log("add")
+      $.post( "inc/addInfo.php", {
+        title: $('#delete-title-info_'+id).val(),
+        content: $('#delete-textarea-info_'+id).val(),
+        team_id: getUrlParameter('club')
+      }, function(response,status){
+        console.log(response)
+        if(response == "succes"){
+          location.reload();
+        }
+      });
+    }else{
+    console.log($('#delete-title-info_'+id).val())
+    console.log($('#delete-textarea-info_'+id).val())
+    console.log($('#js-info-update-id_'+id).text())
+    console.log("update")
+      $.post( "inc/updateInfo.php", {
+        title: $('#delete-title-info_'+id).val(),
+        content: $('#delete-textarea-info_'+id).val(),
+        id: $('#js-info-update-id_'+id).text()
+      }, function(response,status){
+        console.log(response)
+      });
+    }
+  })
 
   $('body').on('click','.js-image',function(){
   // $('.js-image').on('click',function(){
@@ -184,4 +269,32 @@ $(document).ready(function(){
   // $('#js-reserve_1').on('click',function(){
     window.location.replace("reserve.html?id="+selected);
   })
+});
+
+
+
+
+var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+
+//An image to overlay
+$overlay.append($image);
+
+//Add overlay
+$("body").append($overlay);
+
+//click the image and a scaled version of the full size image will appear
+$("#photo-gallery a").click( function(event) {
+    event.preventDefault();
+    var imageLocation = $(this).attr("href");
+
+    //update overlay with the image linked in the link
+    $image.attr("src", imageLocation);
+
+    //show the overlay
+    $overlay.show();
+} );
+
+$("#overlay").click(function() {
+    $( "#overlay" ).hide();
 });

@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- <link rel="stylesheet" href="css/sideBar.css"> -->
     <title>Hackathon2018</title>
+    <script src="js/pages/clubs.js"></script>
 </head>
 <body>
 
@@ -27,69 +28,122 @@
             <h1 class="col-4 display-4 js-club-name">"SVS Stevensbeek"</h1>
         </div>
     </div>
+
     <div class="max-width">
         <div class="row skewbuttons">
             <button type="button" class="btn btn-primary  button1 col-2 ">De club</button>
             <button type="button" class="btn btn-primary  button2 col-2"><span>Contact</span></button>
             <button type="button" class="btn btn-primary  button3 col-2">Events</button>
         </div>
-        <div class="row">
+        <div class="row container">
+            <h3 class="card-body display-4">Onze School</h3>
             <div class="card  col-8 ">
-                <h3 class="card-body head">Onze School</h3>head
                 <div class="card-body js-collapsed-container collapsed">
                     <p class="js-club-info">
-                        Sportschool Fit For Free Alkmaar is het fitnesscentrum in Alkmaar, waar je op de manier kan
-                        sporten
-                        die bij jou past. Loop gerust eens binnen aan de Vondelstraat 39 en ontdek of fitness wat voor
-                        jou
-                        is.
+
+
+
                     </p>
-                    <h1 id="js-info-title_1">Over onze club</h1>
-                    <p id="js-info_1">
-                        Sportschool Fit For Free Alkmaar is het fitnesscentrum in Alkmaar, waar je op de manier kan
-                        sporten
-                        die bij jou past. Loop gerust eens binnen aan de Vondelstraat 39 en ontdek of fitness wat voor
-                        jou
-                        is.
-                    </p>
+
                     <div class="js-collapsed collapse" id="text">
 
                     </div>
-                    <a id="js-toggle-collapsed" class="clear js-more-info">Read More</a>
-                </div>
+
+                <a id="js-toggle-collapsed" class="clear js-more-info">Read More</a>
+                <button type="button" class="btn btn-primary toggleHide hide js-add-info">add</button>
             </div>
 
-            <div class="card">
-                <h5 class="card-header">Pictures</h5>
-                <div class="card-body js-collapsed-container js-images-container collapsed">
-                    <img class="js-image" src="img/puppy.jpg">
-                    <img class="js-image" src="img/1.jpg">
-                    <img class="js-image" src="img/2.jpg">
-                    <img class="js-image" src="img/3.jpg">
-                    <img class="js-image" src="img/4.jpg">
-                    <img class="js-image" src="img/5.jpg">
+            <h5 class="col-4 display-4">Even binnen kijken</h5>
+                <div class="card">
+                    <div class="card-body js-collapsed-container js-images-container collapsed">
+                        <img class="js-image" src="img/puppy.jpg">
+                        <img class="js-image" src="img/1.jpg">
+                        <img class="js-image" src="img/2.jpg">
+                        <img class="js-image" src="img/3.jpg">
+                        <img class="js-image" src="img/4.jpg">
+                        <img class="js-image" src="img/5.jpg">
+                    </div>
                 </div>
-            </div>
 
+
+            <h5 class="col-4    display-4">Contact</h5>
             <div class="card" id="contact">
-                <h5 class="card-header">Contact</h5>
                 <div class="card-body">
                 </div>
             </div>
 
-            <div class="card">
-                <h5 class="card-header">Events</h5>
-                <div class="card-body">
-                    <div class="lesson mb-4" data-container="body" data-toggle="popover" data-placement="right">
-                        <div class="lessonLeft">
-                            <div class="startTime" id="startTime_1">09:00</div>
-                            <div class="finishTime" id="finishTime_1">11:00</div>
-                        </div>
-                        <div class="lessonRight">
-                            <div class="name" id="title_1">event</div>
-                            <div class="extra" id="name_1">bary</div>
+            <h5 class="col-4 display-4">Trainings</h5>
+            <div class="card row">
+                <div class="card-body row ">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
+                        <div class="db-wrapper">
+                            <div class="db-pricing-eleven db-bk-color-three">
+                                <div class="price">
+                                    <sup>$</sup>799
+                                    <small>per quarter</small>
+                                </div>
+                                <div class="type">
+                                    ADVANCE PLAN
+                                </div>
+                                <ul>
+
+                                    <li><i class="glyphicon glyphicon-print"></i>30+ Accounts </li>
+                                    <li><i class="glyphicon glyphicon-time"></i>150+ Projects </li>
+                                    <li><i class="glyphicon glyphicon-trash"></i>Lead Required</li>
+                                </ul>
+                                <div class="pricing-footer">
+
+                                    <a href="#" class="btn db-button-color-square btn-lg">BOOK ORDER</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="db-wrapper">
+                            <div class="db-pricing-eleven db-bk-color-three">
+                                <div class="price">
+                                    <sup>$</sup>799
+                                    <small>per quarter</small>
+                                </div>
+                                <div class="type">
+                                    ADVANCE PLAN
+                                </div>
+                                <ul>
+
+                                    <li><i class="glyphicon glyphicon-print"></i>30+ Accounts </li>
+                                    <li><i class="glyphicon glyphicon-time"></i>150+ Projects </li>
+                                    <li><i class="glyphicon glyphicon-trash"></i>Lead Required</li>
+                                </ul>
+                                <div class="pricing-footer">
+
+                                    <a href="#" class="btn db-button-color-square btn-lg">BOOK ORDER</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="db-wrapper">
+                        <div class="db-pricing-eleven db-bk-color-three">
+                            <div class="price">
+                                <sup>$</sup>799
+                                <small>per quarter</small>
+                            </div>
+                            <div class="type">
+                                ADVANCE PLAN
+                            </div>
+                            <ul>
+
+                                <li><i class="glyphicon glyphicon-print"></i>30+ Accounts </li>
+                                <li><i class="glyphicon glyphicon-time"></i>150+ Projects </li>
+                                <li><i class="glyphicon glyphicon-trash"></i>Lead Required</li>
+                            </ul>
+                            <div class="pricing-footer">
+
+                                <a href="#" class="btn db-button-color-square btn-lg">BOOK ORDER</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
