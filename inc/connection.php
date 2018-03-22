@@ -17,3 +17,8 @@ else
     echo "There is a problem:"; // Message says that there is a problem.
     die(mysqli_error($conn)); // Shows the $connect variable.
 }
+
+
+if (isset($_POST['verstuur_training'])){
+    $conn->query("INSERT INTO `projecten` VALUES (NULL, '{$_POST['training_naam']}', NULL, '{$_POST['training_omschrijving']}', NOW(), NULL, '{$_POST['training_taal']}', '{$_POST['training_docent']}' )  ");
+}
