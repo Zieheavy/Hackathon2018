@@ -1,6 +1,6 @@
 :root{
 	--primary: #F55922;
-	--primary-hover: #F13A0E;
+	--primary-hover: #ff5e00;
 
 	--secondary:#2E428A;
 	--secondary-hover:#1A2659;
@@ -10,6 +10,13 @@
 }
 body{
 	overflow-x: hidden;
+}
+a{
+	color: var(--primary);
+}
+a:hover{
+	color: var(--primary-hover);
+	text-decoration: underline;
 }
 ::selection {
   background: var(--primary); /* WebKit/Blink Browsers */
@@ -47,6 +54,10 @@ body{
 
 .gradient{
 	background: var(--gradient);
+	color: white;
+}
+.gradient-hover{
+	background: var(--gradient-hover);
 	color: white;
 }
 .title{
