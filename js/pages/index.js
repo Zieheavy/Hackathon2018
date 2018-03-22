@@ -21,6 +21,14 @@ $(document).ready(function(){
 		login()
 	})
 
+	$('.js-profile').on('click',function(){
+		console.log(getSession().privileges == 1)
+		if(getSession().privileges == 0){
+			window.location.href = ("profiel.html?id=4")
+		}else if(getSession().privileges == 1){
+			window.location.href = ("profielscholen.html")
+		}
+	})
 
   $('body').on('click','.js-logout',function(){
 		console.log('logout')
@@ -35,6 +43,7 @@ $(document).ready(function(){
 				$('.js-logout').text('Login')
 				$('.js-logout').addClass('js-login')
 				$('.js-logout').removeClass('js-logout')
+				$('.js-toggle').toggleClass('hide')
 			}
 		});
 	})
@@ -145,6 +154,7 @@ $(document).ready(function(){
 		$('.js-login').text('Logout')
 		$('.js-login').addClass('js-logout')
 		$('.js-login').removeClass('js-login')
+		$('.js-toggle').toggleClass('hide')
 	}
 
 });
