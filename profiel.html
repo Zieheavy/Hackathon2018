@@ -23,7 +23,7 @@
 		<div class="jumbotron mb-4 p-0 position-relative">
 			<img src="img/profiel.jpg" class="w-100">
 			<div class="container position-absolute header">
-				<h2 class="mb-4 title">Welcome Maarten.Jakobs@gmail.com</h2>
+				<h2 class="mb-4 title" id="title">Welcome Maarten.Jakobs@gmail.com</h2>
 				<h5 class="mb-4">Aankomende training: Donderdag 22 maart, 19:00 t/m 20:30</h5>
 			</div>
 		</div>
@@ -40,25 +40,11 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
-			      <th>Dinsdag</th>
-			      <td>20 maart</td>
-			      <td>17:00 tm/ 18:30</td>
-			      <td>Max</td>
-			      <td><a href="#" class="btn btn-secondary">Afmelden voor deze training</a></td>
-			    </tr>
-			    <tr>
-			      <th>Donderdag</th>
-			      <td>22 maart</td>
-			      <td>17:00 tm/ 18:30</td>
-			      <td>Ryan</td>
-			      <td><a href="#" class="btn btn-secondary">Afmelden voor deze training</a></td>
-			    </tr>
-			    <tr>
-			      <th>Dinsdag</th>
-			      <td>27 maart</td>
-			      <td>17:00 tm/ 18:30</td>
-			      <td>Max</td>
+			    <tr class="repeat">
+			      <th id="day_1">Dinsdag</th>
+			      <td id="date_1">20 maart</td>
+			      <td id="time_1">17:00 tm/ 18:30</td>
+			      <td id="name_1">Max</td>
 			      <td><a href="#" class="btn btn-secondary">Afmelden voor deze training</a></td>
 			    </tr>
 			  </tbody>
@@ -114,7 +100,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Custom js  -->
     <script src="js/main.js"></script>
-    <script src="js/pages/index.js"></script>
+    <script src="js/pages/profiel.js"></script>
 	<script src="js/sideBar.js"></script>
 </body>
 </html>
