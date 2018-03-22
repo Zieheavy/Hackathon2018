@@ -1,7 +1,9 @@
 $(document).ready(function(){
   console.log("profile loaded")
-  console.log(getSession())
-  // $('').text(getSession())
+  console.log()
+  setTimeout(function () {
+    $('#title').text("welcome " + getSession().username)
+  }, 10);
 
   $.post( "inc/getEvent.php", {
     id: getUrlParameter('id')
