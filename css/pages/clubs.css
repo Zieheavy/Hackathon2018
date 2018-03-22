@@ -265,6 +265,7 @@ body{
 }
 .display-4{
     font-size: 45px;
+    max-height: 5vw;
 
 }
 
@@ -276,6 +277,27 @@ body{
 .card{
     min-width: 65vw !important;
     max-width: 65vw !important;
+}
+
+.card-body img{
+    max-width: 31vw;
+    max-height: 31vh;
+    padding: 1vw;
+
+}
+
+.contactRow img{
+    position: absolute;
+    left: 0vw;
+    right: 0vw;
+    min-width: 35vw;
+    min-height: 35vh;
+    padding: 0px;
+}
+
+.contactRow{
+    position: relative;
+    min-height: 40vh;
 }
 
 
@@ -397,4 +419,14 @@ PRICING STYLES
 
 .db-pricing-eleven.popular .price {
     padding-top: 80px;
+}
+
+#name-1,
+#name-2,
+#name-3{
+    background: #2E428A;
+}
+
+.bgPrice{
+    background: #1A2659;
 }

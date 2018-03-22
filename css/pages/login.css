@@ -1,0 +1,10 @@
+.login-card{
+	background: white;
+	width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    margin: 0 auto;
+    padding: 30px;
+}
