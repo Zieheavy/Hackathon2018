@@ -11,6 +11,13 @@
 body{
 	overflow-x: hidden;
 }
+a{
+	color: var(--primary);
+}
+a:hover{
+	color: var(--primary-hover);
+	text-decoration: underline;
+}
 ::selection {
   background: var(--primary); /* WebKit/Blink Browsers */
 }
