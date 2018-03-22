@@ -1,3 +1,7 @@
+body{
+    background-color: #E3E3E3;
+}
+
 .js-collapsed{
   display:none;
 }
@@ -207,6 +211,9 @@
     background-repeat: no-repeat;
     color: white;
     height: 50vh;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
 }
 
 .button1{
@@ -247,10 +254,19 @@
     margin-left: 40px;
     margin-top: 20px;
     padding-bottom: 20px;
+    height: 60px;
 }
 
 .Head{
-    color: var(--primary);
-    font-family: Impact;
-    font-size: 30px;
+    font-size: 45px;
+}
+
+.max-width{
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.card{
+    min-width: 80vw !important;
+    max-width: 80vw !important;
 }
