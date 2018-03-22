@@ -11,11 +11,13 @@ $(document).ready(function(){
   headerFooter();
 
   $.post( "inc/getClub.php", {
-    club: getUrlParameter('id')
-  }, function(response,status){
-    console.log(JSON.parse(response))
-    club = JSON.parse(response)[0];
-  });
+     club: getUrlParameter('club')
+   }, function(response,status){
+     console.log(JSON.parse(response))
+     club = JSON.parse(response)[0];
+     $('.js-club-name').text(club.naam)
+     $('.js-club-info').text(club.info)
+   });
 
   $.post( "inc/getTrainingen.php", {
     club: getUrlParameter('club')
@@ -80,66 +82,6 @@ $(document).ready(function(){
       console.log(images[i].url)
       $('.js-images-container').append("<img class='js-image' src='img/" + images[i].url + "'>")
     }
-  });
-
-  $.post( "inc/getEvents.php", {
-    club: getUrlParameter('club')
-  }, function(response,status){
-    console.log(JSON.parse(response))
-    events = JSON.parse(response);
-    console.log(events)
-    $('.js-images-container').text('')
-    for(var i = 1; i < events.length; i++){
-      repeatItem('lesson')
-    }
-    var temp = "";
-    temp += "<img src='img/puppy.jpg' class='popoverImage'>"
-    temp += "<div class='title' id='pop-title'>Event Event Evenets</div>"
-    temp += "<i class='fa fa-circle positive' aria-hidden='true'></i>"
-    temp += "<div class='iconInformation'>Er zijn plaatsen vrij</div>"
-    temp += "<div class='reserve'>Reserve</div>"
-    for(var i = 0; i < events.length; i++){
-      $('#startTime_'+(i+1)).text(events[i].startdatum)
-      $('#finishTime_'+(i+1)).text(events[i].einddatum)
-      $('#title_'+(i+1)).text(events[i].naam)
-      $('#name_'+(i+1)).text(events[i].person)
-    }
-    $(function () {
-        $('.lesson').popover({
-            html: true,
-            placement: 'top',
-            content: temp
-        }).click(function(e) {
-            $('.lesson').popover('hide');
-            $(this).popover('show');
-            selected = parseInt($(this).find(".startTime").attr('id').split('_')[1])-1
-            setTimeout(function () {
-              console.log(selected)
-              if(getSession().loggedin == 1){
-                $('.reserve').css('display','inline ');
-              }else{
-                $('.reserve').css('display','none');
-              }
-              $('#pop-title').text(events[selected].naam)
-              if(parseInt(events[selected].ingeschreven) >= parseInt(events[selected].deelnemers)){
-                console.log("full")
-                $('.fa-circle').css('color','red')
-                $('.iconInformation').text('er zijn geen plaatsen meer')
-              }else if(Math.floor(parseInt(events[selected].deelnemers)/100*90) <= parseInt(events[selected].ingeschreven)){
-                console.log("almost full")
-                $('.fa-circle').css('color','orange')
-                $('.iconInformation').text('er zijn weinig plaatsen')
-              }else{
-                console.log("space")
-                $('.fa-circle').css('color','green')
-                $('.iconInformation').text('Er zijn plaatsen vrij')
-              }
-            }, 10);
-            clickedAway = false
-            isVisible = true
-            e.preventDefault()
-        });
-    });
   });
 
   setTimeout(function () {
