@@ -5,6 +5,7 @@ $(document).ready(function(){
   var images;
   var events;
   var selected = 0;
+  var trainingen;
 
   console.log(getSession())
   headerFooter();
@@ -17,6 +18,30 @@ $(document).ready(function(){
     $('.js-club-name').text(club.naam)
     $('.js-club-info').text(club.info)
     $('#js-club-info-input').val(club.info)
+  });
+
+  $.post( "inc/getTrainingen.php", {
+    club: getUrlParameter('club')
+  }, function(response,status){
+    console.log(JSON.parse(response))
+    trainingen = JSON.parse(response);
+    console.log(trainingen)
+
+    $('#price-1').prepend('<sup>$</sup>'+trainingen[0].price);
+    $('#price-2').prepend('<sup>$</sup>'+trainingen[1].price);
+    $('#price-3').prepend('<sup>$</sup>'+trainingen[2].price);
+    $('#name-1').text(trainingen[0].name);
+    $('#name-2').text(trainingen[1].name);
+    $('#name-3').text(trainingen[2].name);
+    $('#info-1-1').text("trainers: "+trainingen[0].trainers);
+    $('#info-1-2').text("type: "+trainingen[0].type);
+    $('#info-1-3').text("voorganers: "+trainingen[0].voorganers);
+    $('#info-2-1').text("trainers: "+trainingen[1].trainers);
+    $('#info-2-2').text("type: "+trainingen[1].type);
+    $('#info-2-3').text("voorganers: "+trainingen[1].voorganers);
+    $('#info-3-1').text("trainers: "+trainingen[2].trainers);
+    $('#info-3-2').text("type: "+trainingen[2].type);
+    $('#info-3-3').text("voorganers: "+trainingen[2].voorganers);
   });
 
   $.post( "inc/getInfo.php", {
