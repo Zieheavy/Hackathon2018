@@ -53,6 +53,7 @@ $(document).ready(function(){
     images = JSON.parse(response);
     console.log(images)
     $('.js-images-container').text('')
+    console.log(images.length)
     for(var i = 0; i < images.length; i++){
       console.log(images[i].url)
       $('.js-images-container').append("<img class='js-image' src='img/" + images[i].url + "'>")
