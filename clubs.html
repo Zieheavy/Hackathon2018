@@ -34,23 +34,29 @@
     </div>
     <div class="row ">
         <div class="card  col-8 ">
-            <h3 class="card-body Head">Onze School</h3>
             <div class="card-body js-collapsed-container collapsed">
-                <p class="js-club-info">
+                <p class="js-club-info toggleHide">
                     Sportschool Fit For Free Alkmaar is het fitnesscentrum in Alkmaar, waar je op de manier kan sporten
                     die bij jou past. Loop gerust eens binnen aan de Vondelstraat 39 en ontdek of fitness wat voor jou
                     is.
                 </p>
-                <h1 id="js-info-title_1">Over onze club</h1>
-                <p id="js-info_1">
+                <textarea class="form-control toggleHide hide" rows="5" id="js-club-info-input"></textarea>
+                <h1 id="js-info-title_1" class="toggleHide">Over onze club</h1>
+                <input type="text" id="js-info-input-title_1" class="form-control toggleHide hide" value="">
+                <p id="js-info-id" class="hide">
+                <p id="js-info_1" class="toggleHide">
                     Sportschool Fit For Free Alkmaar is het fitnesscentrum in Alkmaar, waar je op de manier kan sporten
                     die bij jou past. Loop gerust eens binnen aan de Vondelstraat 39 en ontdek of fitness wat voor jou
                     is.
                 </p>
+                <textarea class="form-control toggleHide hide" rows="5" id="js-input-info_1"></textarea>
+                <button type="button" class="btn btn-primary js-delete-info toggleHide hide" id="delete_info">delete</button>
+                <button type="button" class="btn btn-primary toggleHide hide js-save-info" id="save_info">Update</button>
                 <div class="js-collapsed collapse" id="text">
 
                 </div>
                 <a id="js-toggle-collapsed" class="clear js-more-info">Read More</a>
+                <button type="button" class="btn btn-primary toggleHide hide js-add-info">add</button>
             </div>
         </div>
     </div>

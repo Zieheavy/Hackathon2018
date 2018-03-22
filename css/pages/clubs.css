@@ -1,6 +1,13 @@
 .js-collapsed{
   display:none;
 }
+.js-delete-info,.js-save-info,.js-update-infos{
+  float: right;
+}
+
+.hide{
+  display: none;
+}
 
 .times{
   background: lightgray;
