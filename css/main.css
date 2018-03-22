@@ -140,7 +140,7 @@ a:hover{
 
 .fa-bars{
 	font-size: 40px !important;
-	position: absolute;
+	position: fixed;
 	top: 3%;
 	left: 3%;
 	z-index: 1;
@@ -157,6 +157,7 @@ a:hover{
 
 .fa-bars:hover{
 	color: var(--primary-hover);
+
 }
 /* The side navigation menu */
 .sidenav {

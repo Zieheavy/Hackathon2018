@@ -398,3 +398,14 @@ PRICING STYLES
 .db-pricing-eleven.popular .price {
     padding-top: 80px;
 }
+
+#name-1,
+#name-2,
+#name-3{
+    background: #2E428A;
+}
+
+.bgPrice{
+    background: #1A2659;
+}
+
