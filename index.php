@@ -30,7 +30,6 @@
 
         <div class="content">
             <h1>9 voetbalscholen in heel Nederland!</h1>
-            <p class="h1-intro" data-readmore="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad adipisci aliquid aspernatur blanditiis cupiditate dolorem ducimus eligendi facilis harum minima molestias nam odio perspiciatis, quaerat qui sit velit voluptatibus.</p><span data-readmore-receiver="1">Lees meer</span>
         </div>
     </div>
 
@@ -38,25 +37,9 @@
 
         <div class="content">
             <form action="clubs.html?club=" method="GET" id="views-exposed-form-clubs-page" accept-charset="UTF-8"><div>
-                    <div class="col-xs-12">
+                    <div class="col-xs-12 no-padding">
                         <div class="col-xs-12 no-padding">
-                            <div class="views-exposed-form search-clubs">
-                                <div class="views-exposed-widgets clearfix">
-                                    <div id="edit-clubs-wrapper" class="views-exposed-widget views-widget-filter-clubs">
-                                        <div class="views-widget">
-                                            <div class="form-item form-type-textfield form-item-clubs-address">
-                                                <input placeholder="Zoek een voetbalschool" type="text" id="edit-clubs-address" name="plaats" value="" size="60" maxlength="128" class="form-text" onkeyup="myFunction(this.value)">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="views-exposed-widget views-submit-button symbool">
-                                        <input type="submit" id="edit-submit-clubs" name="" value="Zoeken" class="form-submit">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 no-padding">
-                            <button type="button" class="use-location huidigeLocatie">Mijn locatie gebruiken</button>
+                            <button type="button" class="use-location huidigeLocatie">Zoek het dichbijzijnste voetbalschool</button>
                         </div>
                     </div>
                 </div>

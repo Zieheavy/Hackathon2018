@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b534df75-1c6e-474e-ab24-2318d1918b5f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/compare.html" afterPath="$PROJECT_DIR$/compare.html" />
       <change beforePath="$PROJECT_DIR$/css/pages/locatie.css" afterPath="$PROJECT_DIR$/css/pages/locatie.css" />
       <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change beforePath="$PROJECT_DIR$/js/bootbox.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/js/pages/coordinaten.js" afterPath="$PROJECT_DIR$/js/pages/coordinaten.js" />
-      <change beforePath="$PROJECT_DIR$/js/pages/index.js" afterPath="$PROJECT_DIR$/js/pages/index.js" />
-      <change beforePath="$PROJECT_DIR$/sql/businessenergy (2).sql" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,21 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootbox.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/bootbox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="coordinaten.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="coordinaten.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pages/coordinaten.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="350" column="14" lean-forward="false" selection-start-line="350" selection-start-column="14" selection-end-line="350" selection-end-column="14" />
+            <state relative-caret-position="726">
+              <caret line="332" column="0" lean-forward="true" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
               <folding>
                 <element signature="e#1552#6016#0" expanded="false" />
                 <element signature="e#1810#1982#0" expanded="false" />
@@ -87,21 +77,31 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-217">
-              <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="442">
+              <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="17" />
               <folding>
-                <element signature="e#31676#31683#1#HTML" expanded="true" />
+                <element signature="e#30107#30114#1#HTML" expanded="true" />
                 <element signature="n#script#8;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="locatie.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="locatie.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/pages/locatie.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="442">
+              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compare.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compare.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,6 +143,8 @@
       <find>header</find>
       <find>--&gt;</find>
       <find>&lt;?=$coordinaat['voetbalschool_naam']</find>
+      <find>zoek enen</find>
+      <find>bestel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,9 +158,11 @@
         <option value="$PROJECT_DIR$/inc/connection.php" />
         <option value="$PROJECT_DIR$/js/pages/index.js" />
         <option value="$PROJECT_DIR$/js/bootbox.js" />
-        <option value="$PROJECT_DIR$/css/pages/locatie.css" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/js/pages/coordinaten.js" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/pages/locatie.css" />
+        <option value="$PROJECT_DIR$/betaling.php" />
+        <option value="$PROJECT_DIR$/compare.html" />
       </list>
     </option>
   </component>
@@ -169,7 +173,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1055" />
@@ -269,15 +273,15 @@
       <workItem from="1521541714986" duration="14493000" />
       <workItem from="1521620782952" duration="26196000" />
       <workItem from="1521648031407" duration="848000" />
-      <workItem from="1521706385742" duration="10518000" />
+      <workItem from="1521706385742" duration="14782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52055000" />
+    <option name="totallyTimeSpent" value="56319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1064" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1064" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18017058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -384,7 +388,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521647403122" expanded="true" signature="468:489" ph="SELECT * FRO... users" />
+            <marker date="1521717275513" expanded="true" signature="468:489" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -402,7 +406,7 @@
         <state relative-caret-position="969">
           <caret line="33" column="262" lean-forward="false" selection-start-line="33" selection-start-column="262" selection-end-line="33" selection-end-column="262" />
           <folding>
-            <element signature="e#31676#31683#1#HTML" expanded="true" />
+            <element signature="e#30107#30114#1#HTML" expanded="true" />
             <element signature="n#script#8;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -479,7 +483,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521647403122" expanded="true" signature="468:489" ph="SELECT * FRO... users" />
+            <marker date="1521717275513" expanded="true" signature="468:489" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -497,7 +501,7 @@
         <state relative-caret-position="221">
           <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
           <folding>
-            <element signature="e#31676#31683#1#HTML" expanded="true" />
+            <element signature="e#30107#30114#1#HTML" expanded="true" />
             <element signature="n#script#8;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -533,7 +537,7 @@
         <state relative-caret-position="323">
           <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding>
-            <element signature="e#31676#31683#1#HTML" expanded="true" />
+            <element signature="e#30107#30114#1#HTML" expanded="true" />
             <element signature="n#script#8;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -615,7 +619,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521647403122" expanded="true" signature="468:489" ph="SELECT * FRO... users" />
+            <marker date="1521717275513" expanded="true" signature="468:489" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -654,45 +658,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/pages/locatie.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/bootbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/coordinaten.json.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-217">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-          <folding>
-            <element signature="e#31676#31683#1#HTML" expanded="true" />
-            <element signature="n#script#8;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/pages/coordinaten.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="350" column="14" lean-forward="false" selection-start-line="350" selection-start-column="14" selection-end-line="350" selection-end-column="14" />
+        <state relative-caret-position="726">
+          <caret line="332" column="0" lean-forward="true" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
           <folding>
             <element signature="e#1552#6016#0" expanded="false" />
             <element signature="e#1810#1982#0" expanded="false" />
@@ -718,6 +687,67 @@
             <element signature="e#5551#5715#0" expanded="false" />
             <element signature="e#5733#6002#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bootbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/coordinaten.json.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/getTrainingen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521717275507" expanded="true" signature="122:167" ph="SELECT * FRO... trainingen" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/betaling.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="39" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="e#30107#30114#1#HTML" expanded="true" />
+            <element signature="n#script#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/pages/locatie.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
