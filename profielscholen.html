@@ -23,7 +23,7 @@
 		<div class="jumbotron mb-4 p-0 position-relative">
 			<img src="img/profiel.jpg" class="w-100">
 			<div class="container position-absolute header">
-				<h2 class="mb-4 title" id="title">Welcome Maarten.Jakobs@gmail.com</h2>
+				<h2 class="mb-4 title">Welcome Maarten.Jakobs@gmail.com</h2>
 				<h5 class="mb-4">Aankomende training: Donderdag 22 maart, 19:00 t/m 20:30</h5>
 			</div>
 		</div>
@@ -35,21 +35,84 @@
 			      <th scope="col">Trainingsdag</th>
 			      <th scope="col">Datum</th>
 			      <th scope="col">Tijd</th>
-			      <th scope="col">Trainer</th>
-			      <th scope="col">Afmelden voor training</th>
+			      <th scope="col">Aantal Spelers</th>
+			      <th scope="col">Training Aflassen</th>
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr class="repeat">
-			      <th id="day_1">Dinsdag</th>
-			      <td id="date_1">20 maart</td>
-			      <td id="time_1">17:00 tm/ 18:30</td>
-			      <td id="name_1">Max</td>
-			      <td><a href="#" class="btn btn-secondary">Afmelden voor deze training</a></td>
+			    <tr>
+			      <th>Dinsdag</th>
+			      <td>20 maart</td>
+			      <td>17:00 tm/ 18:30</td>
+			      <td>22</td>
+			      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Last training af</button></td>
+			    </tr>
+			    <tr>
+			      <th>Donderdag</th>
+			      <td>22 maart</td>
+			      <td>17:00 tm/ 18:30</td>
+			      <td>14</td>
+			      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Last training af</button></td>
+			    </tr>
+			    <tr>
+			      <th>Dinsdag</th>
+			      <td>27 maart</td>
+			      <td>17:00 tm/ 18:30</td>
+			      <td>20</td>
+			      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Last training af</button></td>
 			    </tr>
 			  </tbody>
 			</table>
-
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Rede van afgelastingens</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      	<form>
+				      	<ul class="list-unstyled">
+					      	<li>	
+					          <input class="form-check-input radio" type="radio" id="defaultCheck1" name="redeAflassen">
+							  <label class="form-check-label radio-label" for="defaultCheck1">
+							    Weer omstandigheden
+							  </label>
+							</li>
+							<li>
+							  <input class="form-check-input radio" type="radio" id="defaultCheck2" name="redeAflassen">
+							  <label class="form-check-label radio-label" for="defaultCheck2">
+							    Trainer abcent
+							  </label>
+							</li>
+							<li>
+							  <input class="form-check-input radio" type="radio" id="defaultCheck3" name="redeAflassen">
+							  <label class="form-check-label radio-label" for="defaultCheck3">
+							    Feestdag
+							  </label>
+							</li>
+							<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+						    Button with data-target
+						  </button>
+						</p>
+						<div class="collapse" id="collapseExample">
+						  <div class="card card-body">
+						    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+						  </div>
+						</div>
+						</ul>
+					</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Trainen aflassen</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+</div>
 			<hr>
 
 			<div class="row">
@@ -102,7 +165,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Custom js  -->
     <script src="js/main.js"></script>
-    <script src="js/pages/profiel.js"></script>
+    <script src="js/pages/index.js"></script>
 	<script src="js/sideBar.js"></script>
 </body>
 </html>
