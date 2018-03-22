@@ -18,7 +18,7 @@
     $_SESSION['sportClubId'] = false;
   }
 
-  $conn =  new mysqli("localhost", "root", "", "businessenergy");
+  $conn =  new mysqli("localhost", "root", "usbw", "businessenergy");
 
   $usersArray = [];
 
