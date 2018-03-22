@@ -36,7 +36,7 @@
         $_SESSION['password'] = $usersArray[$i]['password'];
         $_SESSION['privileges'] = $usersArray[$i]['Privileges'];
         $_SESSION['loggedin'] = 1;
-        if($usersArray[$i]['Privileges'] == 2 || $userArray[$i]['Privileges'] == 1){
+        if($usersArray[$i]['Privileges'] == 2 || $usersArray[$i]['Privileges'] == 1){
           $_SESSION['sportClubId'] = $usersArray[$i]['spotclub_id'];
           // echo "sportclub";
         }else{
