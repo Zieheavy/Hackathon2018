@@ -33,7 +33,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 var attrs = ['id'];
 function resetAttributeNames(section) {
-    var tags = section.find('div, data-toggle'), idx = section.index();
+    var tags = section.find('div, name'), idx = section.index();
     tags.each(function() {
       var $this = $(this);
       $.each(attrs, function(i, attr) {

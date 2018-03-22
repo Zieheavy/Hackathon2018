@@ -14,6 +14,9 @@
   if(!isset($_SESSION['loggedin'])){
     $_SESSION['loggedin'] = 0;
   }
+  if(!isset($_SESSION['sportClubId'])){
+    $_SESSION['sportClubId'] = false;
+  }
 
   $conn =  new mysqli("localhost", "root", "", "businessenergy");
 
@@ -32,7 +35,13 @@
         $_SESSION['username'] = $usersArray[$i]['name'];
         $_SESSION['password'] = $usersArray[$i]['password'];
         $_SESSION['privileges'] = $usersArray[$i]['Privileges'];
-          $_SESSION['loggedin'] = 1;
+        $_SESSION['loggedin'] = 1;
+        if($usersArray[$i]['Privileges'] == 2){
+          $_SESSION['sportClubId'] = $usersArray[$i]['spotclub_id'];
+          // echo "sportclub";
+        }else{
+          $_SESSION['sportClubId'] = false;
+        }
         echo "loggedin";
         // echo json_encode($_SESSION);
       }
