@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	console.log('index loaded');
-	console.log();
   headerFooter();
 	if(getSession().loggedin == 1){
 		loginStyling();

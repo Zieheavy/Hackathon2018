@@ -6,7 +6,6 @@
 	<!-- Character set -->
 	<meta charset="utf-8">
 
-    <!-- For rendering on mobile devices and touch zooming   -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -46,7 +45,7 @@
                                     <div id="edit-clubs-wrapper" class="views-exposed-widget views-widget-filter-clubs">
                                         <div class="views-widget">
                                             <div class="form-item form-type-textfield form-item-clubs-address">
-                                                <input placeholder="Zoek op stad, postcode of adres" type="text" id="edit-clubs-address" name="plaats" value="" size="60" maxlength="128" class="form-text">
+                                                <input placeholder="Zoek een voetbalschool" type="text" id="edit-clubs-address" name="plaats" value="" size="60" maxlength="128" class="form-text" onkeyup="myFunction(this.value)">
                                             </div>
                                         </div>
                                     </div>
@@ -74,7 +73,7 @@
                                     <article class="block-light location-result col-xs-12 no-padding" itemscope="" itemtype="https://schema.org/ExerciseGym">
                                         <a itemprop="url" href="clubs.html?club=<?=$coordinaat['voetbalschool_id']?>">
                                             <div class="info-wrap">
-                                                <h2><span itemprop="name"><?=$coordinaat['voetbalschool_naam']?></span></h2>
+                                                <h2><span class="voetbalschool_naam" value="<?=$coordinaat['voetbalschool_naam']?>" itemprop="name"><?=$coordinaat['voetbalschool_naam']?></span></h2>
                                                 <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
                                                     <div><span itemprop="streetAddress"><?=$coordinaat['voetbalschool_adres']?> - <?=$coordinaat['voetbalschool_postcode']?></span></div>
                                                 </div>
@@ -96,6 +95,21 @@
                 </div>
 
                 <div id="coordinaten"></div>
+
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <div id="topDrieLocaties">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 
                 <div class="view view-clubs view-id-clubs view-display-id-attachment_1">
                     <div class="map hidden-xs hidden-sm">
@@ -121,10 +135,7 @@
     <!--Thema van FitForFree-->
     <script type="text/javascript" src="https://www.fitforfree.nl/sites/fitforfree.nl/files/js/js_7Ukqb3ierdBEL0eowfOKzTkNu-Le97OPm-UqTS5NENU.js"></script>
     <script type="text/javascript" src="https://www.fitforfree.nl/sites/fitforfree.nl/files/js/js_xvYJgU6LChHqbcSh4y1AvdXfD5QBIwT3GVGVUeuksbM.js"></script>
-<!--    <script type="text/javascript" src="https://www.fitforfree.nl/sites/fitforfree.nl/files/js/js_v5h6QiLKJ7jUlhRcF-ebYUzWid1htJHjMqA3bd0tMUw.js"></script>
--->
     <script type="text/javascript" src="https://www.fitforfree.nl/sites/fitforfree.nl/files/js/js_cElcYrYnSTrh_o58MG5L-QyFXV7fjpRR75mEuXs82lU.js"></script>
-    <script type="text/javascript" src="https://www.fitforfree.nl/sites/fitforfree.nl/files/js/js_1TzQZk0guzumY7jHn3ie4jnBcPvqCPz9dFog5oWtJ1Q.js"></script>
     <script type="text/javascript" src="https://www.fitforfree.nl/sites/fitforfree.nl/files/js/js_De0VyhbOgflf-Zh07HlIWFaLv2Q2kZ0WDFYb6lNrKGo.js"></script>
     <script type="text/javascript">
         <!--//--><![CDATA[//><!--
@@ -133,8 +144,9 @@
     </script>
 
 
-
     <script src="js/pages/coordinaten.js"></script>
+    <script src="js/bootbox.min.js"></script>
+    <script src="js/bootbox.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmSWC5wi4lIC6li0O85M_ITdyCprP76V0&callback=initMap"></script>
 
 </body>

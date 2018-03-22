@@ -8,6 +8,7 @@ function initMap(){
     var verschillenLocations = [];
     var gesorteerd = [];
     var obj = {};
+    var array = [];
 
 
     $.post( "inc/coordinaten.json.php", function( data ) {
@@ -19,7 +20,7 @@ function initMap(){
         });
 
         $.each(data, function(i, item) {
-            locatie = {id: parseInt(item.voetbalschool_id), lat: parseFloat(item.lat), lng: parseFloat(item.lng), naam: item.voetbalschool_naam, adres:item.voetbalschool_adres, postcode:item.voetbalschool_postcode  };
+            locatie = {id: parseInt(item.voetbalschool_id), lat: parseFloat(item.lat), lng: parseFloat(item.lng), naam: item.voetbalschool_naam, adres:item.voetbalschool_adres, postcode:item.voetbalschool_postcode, img: item.voetbalschool_img  };
             arrayLocations.push(locatie);
 
             marker = new google.maps.Marker({
@@ -182,45 +183,131 @@ function initMap(){
 
 
             function showPosition(position) {
+
+                function distance(id, naam, adres, postcode, img, lat1, lon1, lat2, lon2) {
+                    var p = 0.017453292519943295;    // Math.PI / 180
+                    var c = Math.cos;
+                    var a = 0.5 - c((lat2 - lat1) * p)/2 +
+                        c(lat1 * p) * c(lat2 * p) *
+                        (1 - c((lon2 - lon1) * p))/2;
+
+                    var kilometer = 12742 * Math.asin(Math.sqrt(a));
+                    array[id] = {id: id, adres:adres, postcode:postcode, img:img, naam: naam, km: kilometer}
+                    //console.log(voetbalschool_id + " - " + kilometer); // 2 * R; R = 6371 km
+                }
+
                 x.innerHTML = "Latitude: " + position.coords.latitude +  "<br>Longitude: " + position.coords.longitude;
 
                 $.each(arrayLocations, function(i, item) {
                     var verschilLat = item.lat - position.coords.latitude;
                     var verschilLng = item.lng - position.coords.longitude;
-                    obj[item.id] = {itemid: i, corddiff: verschilLat + verschilLng, voetbalschool: item.id}
+                    obj[item.id] = {itemid: i, corddiff: verschilLat + verschilLng, voetbalschool: item.id};
+                    distance(item.id, item.naam, item.adres, item.postcode, item.img, item.lat, item.lng, position.coords.latitude, position.coords.longitude);
                 });
 
-                $.each(obj, function (index, value) {
-                    verschillenLocations[index] = value;
+
+                array.sort(function(a,b) {
+                    return (a.km > b.km);
+
                 });
 
-                verschillenLocations.sort(function(a,b) {
-                    return a.corddiff > b.corddiff;
+
+                $("#myModal").on("show", function() {    // wire up the OK button to dismiss the modal when shown
+                    $("#myModal a.btn").on("click", function(e) {
+                        console.log("button pressed");   // just as an example...
+                        $("#myModal").modal('hide');     // dismiss the dialog
+                    });
+                });
+                $("#myModal").on("hide", function() {    // remove the event listeners when the dialog is dismissed
+                    $("#myModal a.btn").off("click");
                 });
 
-                console.dir( verschillenLocations );
+                $("#myModal").on("hidden", function() {  // remove the actual elements from the DOM when fully hidden
+                    $("#myModal").remove();
+                });
 
+                $("#myModal").modal({                    // wire up the actual modal functionality and show the dialog
+                    "backdrop"  : "static",
+                    "keyboard"  : true,
+                    "show"      : true                     // ensure the modal is shown immediately
+                });
 
-
-
-
-                function getDistanceFromLatLonInKm() { // hier ben ik
-                    var R = 6371; // Radius of the earth in km
-                    var dLat = deg2rad(lat2-lat1);  // deg2rad below
-                    var dLon = deg2rad(lon2-lon1);
-                    var a =
-                        Math.sin(dLat/2) * Math.sin(dLat/2) +
-                        Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
-                        Math.sin(dLon/2) * Math.sin(dLon/2)
-                    ;
-                    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-                    var d = R * c; // Distance in km
-                    return d;
+                for(var i = 0; i < 3; i++){
+                    $("#topDrieLocaties").html( "<h4 class='center'>Dit zijn de meest vlakbij voetbalscholen voor  uw loactie!</h4>"+
+                    "                               <div class=\"even\">\n" +
+                    "                                    <article class=\"block-light location-result col-xs-12 no-padding\" itemscope=\"\" itemtype=\"https://schema.org/ExerciseGym\">\n" +
+                    "                                        <a itemprop=\"url\" href=\"clubs.html?club="+array[0].id+"\">\n" +
+                    "                                          <h5><span class='leftSmall' itemprop=\"name\">"+ Math.round( array[0].km * 10) / 10  +" km</span></h5>"+
+                    "                                            <div class=\"info-wrap\">\n" +
+                    "                                                <h2><span itemprop=\"name\">"+array[0].naam+"</span></h2>\n" +
+                    "                                                <div itemprop=\"address\" itemscope=\"\" itemtype=\"http://schema.org/PostalAddress\">\n" +
+                    "                                                    <div><span itemprop=\"streetAddress\">\ " + array[0].adres + " - " + array[0].postcode + "</span></div>\n" +
+                    "                                                </div>\n" +
+                    "                                            </div>\n" +
+                    "                                            <div class=\"field field-name-field-club-in-de-buurt-foto field-type-image field-label-hidden\">\n" +
+                    "                                                <div class=\"field-items\">\n" +
+                    "                                                    <div class=\"field-item even\">\n" +
+                    "                                                        <picture title=\"sportschool Fit For Free Amersfoort\">\n" + "                                                           " +
+                    "                                                            <img src=" + array[0].img + ">\n" +
+                    "                                                        </picture>\n" +
+                    "                                                    </div>\n" +
+                    "                                                </div>\n" +
+                    "                                            </div>\n" +
+                    "                                            <div class=\"clear\"></div>\n" +
+                    "                                        </a>\n" +
+                    "                                    </article>\n" +
+                    "                                </div>"+
+                    "                               <div class=\"even\">\n" +
+                    "                                    <article class=\"block-light location-result col-xs-12 no-padding\" itemscope=\"\" itemtype=\"https://schema.org/ExerciseGym\">\n" +
+                    "                                        <a itemprop=\"url\" href=\"clubs.html?club="+array[1].id+"\">\n" +
+                    "                                         <h5><span class='leftSmall' itemprop=\"name\">"+ Math.round( array[1].km * 10) / 10  +" km</span></h5>"+
+                    "                                            <div class=\"info-wrap\">\n" +
+                    "                                                <h2><span itemprop=\"name\">"+array[1].naam+"</span></h2>\n" +
+                    "                                                <div itemprop=\"address\" itemscope=\"\" itemtype=\"http://schema.org/PostalAddress\">\n" +
+                    "                                                    <div><span itemprop=\"streetAddress\">\ " + array[1].adres + " - " + array[1].postcode + "</span></div>\n" +
+                    "                                                </div>\n" +
+                    "                                            </div>\n" +
+                    "                                            <div class=\"field field-name-field-club-in-de-buurt-foto field-type-image field-label-hidden\">\n" +
+                    "                                                <div class=\"field-items\">\n" +
+                    "                                                    <div class=\"field-item even\">\n" +
+                    "                                                        <picture title=\"sportschool Fit For Free Amersfoort\">\n" + "                                                            " +
+                    "                                                           <img src=" + array[1].img + ">\n" +
+                    "                                                        </picture>\n" +
+                    "                                                    </div>\n" +
+                    "                                                </div>\n" +
+                    "                                            </div>\n" +
+                    "                                            <div class=\"clear\"></div>\n" +
+                    "                                        </a>\n" +
+                    "                                    </article>\n" +
+                    "                                </div>"+
+                    "                               <div class=\"even\">\n" +
+                    "                                    <article class=\"block-light location-result col-xs-12 no-padding\" itemscope=\"\" itemtype=\"https://schema.org/ExerciseGym\">\n" +
+                    "                                        <a itemprop=\"url\" href=\"clubs.html?club="+array[2].id+"\">\n" +
+                    "                                         <h5><span class='leftSmall' itemprop=\"name\">"+ Math.round( array[2].km * 10) / 10  +" km</span></h5>"+
+                    "                                            <div class=\"info-wrap\">\n" +
+                    "                                                <h2><span itemprop=\"name\">"+array[2].naam+"</span></h2>\n" +
+                    "                                                <div itemprop=\"address\" itemscope=\"\" itemtype=\"http://schema.org/PostalAddress\">\n" +
+                    "                                                    <div><span itemprop=\"streetAddress\">\ " + array[2].adres + " - " + array[2].postcode + "</span></div>\n" +
+                    "                                                </div>\n" +
+                    "                                            </div>\n" +
+                    "                                            <div class=\"field field-name-field-club-in-de-buurt-foto field-type-image field-label-hidden\">\n" +
+                    "                                                <div class=\"field-items\">\n" +
+                    "                                                    <div class=\"field-item even\">\n" +
+                    "                                                        <picture title=\"sportschool Fit For Free Amersfoort\">\n" +
+                    "                                                            <img src=" + array[2].img + ">\n" +
+                    "                                                        </picture>\n" +
+                    "                                                    </div>\n" +
+                    "                                                </div>\n" +
+                    "                                            </div>\n" +
+                    "                                            <div class=\"clear\"></div>\n" +
+                    "                                        </a>\n" +
+                    "                                    </article>\n" +
+                    "                                </div>"
+                    );
                 }
 
-                function deg2rad(deg) {
-                    return deg * (Math.PI/180)
-                }
+
+
 
 
             }
@@ -229,8 +316,40 @@ function initMap(){
 
 
 
-
         });
 
-    });
+
+
+
+
+    }); // einde post ajax
+
+
+
+
+
+} // einde initMap()
+
+function myFunction(value) {
+/*    var input, filter, table, tr, td, i;
+    filter = input.value.toUpperCase();
+
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }*/
+
+if (value === ){
+
 }
+    console.dir(value);
+}// einde myFunction()

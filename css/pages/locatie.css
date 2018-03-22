@@ -1,4 +1,4 @@
-span, h1, .symbool, button{
+span, h1, h4, .symbool, button{
     color: var(--primary)!important;
 }
 
@@ -13,4 +13,12 @@ article:hover{
 #map{
     width: 100% !important;
     height: 1000px !important;
+}
+
+.center{
+    text-align: center;
+}
+
+.leftSmall{
+    float: right!important;
 }
