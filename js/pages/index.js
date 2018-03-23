@@ -145,9 +145,9 @@ $(document).ready(function(){
 		  getSession();
 			loginStyling();
 
-			if(getSession().privileges == 1 || getSession().privileges == 0){
-				$('.js-profile').removeClass("hide")
-			}
+			// if(getSession().privileges == 1 || getSession().privileges == 0){
+			// 	$('.js-profile').removeClass("hide")
+			// }
 			}
 	  });
 	}
