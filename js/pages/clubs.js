@@ -1,4 +1,4 @@
-$(document).ready(function () {
+  $(document).ready(function () {
     var selectedImage = 0;
     var club;
     var info;
@@ -59,6 +59,12 @@ $(document).ready(function () {
         $('#info-3-1').text("trainers: " + trainingen[2].coach);
         $('#info-3-2').text("type: " + trainingen[2].type);
     });
+
+    setTimeout(function () {
+      if(getSession().privileges != 2){
+        $('.js-add-info').addClass("hide")
+      }
+    }, 100);
 
     $.post("inc/getInfo.php", {
         club: getUrlParameter('club')
