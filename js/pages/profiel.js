@@ -44,7 +44,7 @@ $(document).ready(function(){
         readOnly: true
       })
       setTimeout(function () {
-        $('#title').text("welcome " + getSession().username)
+        $('#title').text("Welkom " + getSession().username)
       }, 10);
     });
 

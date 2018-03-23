@@ -90,12 +90,12 @@ function initMap(){
                 {
                     featureType: 'road',
                     elementType: 'geometry',
-                    stylers: [{color: '#f5f1e6'}]
+                    stylers: [{color: '#FFFFFF'}]
                 },
                 {
                     featureType: 'road.arterial',
                     elementType: 'geometry',
-                    stylers: [{color: '#fdfcf8'}]
+                    stylers: [{color: '#FFFFFF'}]
                 },
                 {
                     featureType: 'road.highway',
@@ -120,7 +120,7 @@ function initMap(){
                 {
                     featureType: 'road.local',
                     elementType: 'labels.text.fill',
-                    stylers: [{color: '#F55922'}]
+                    stylers: [{color: '#FFFFF'}]
                 },
                 {
                     featureType: 'transit.line',
@@ -130,7 +130,7 @@ function initMap(){
                 {
                     featureType: 'transit.line',
                     elementType: 'labels.text.fill',
-                    stylers: [{color: '#F55922'}]
+                    stylers: [{color: '#FFFFFF'}]
                 },
                 {
                     featureType: 'transit.line',
