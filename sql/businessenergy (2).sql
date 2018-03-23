@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2018 at 01:57 PM
+-- Generation Time: Mar 23, 2018 at 09:17 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -129,33 +129,81 @@ INSERT INTO `fotosenvideos` (`id`, `url`, `voedbalschool_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ratingcoach`
+--
+
+CREATE TABLE `ratingcoach` (
+  `id` int(11) NOT NULL,
+  `rating` double(2,1) NOT NULL,
+  `comment` varchar(500) NOT NULL,
+  `coach` int(11) NOT NULL,
+  `user` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ratingcoach`
+--
+
+INSERT INTO `ratingcoach` (`id`, `rating`, `comment`, `coach`, `user`) VALUES
+(2, 1.5, 'asdf', 3, 4),
+(3, 2.5, 'adf', 3, 4),
+(4, 2.5, 'asdf', 3, 4),
+(17, 5.0, 'asdf', 3, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ratingparent`
+--
+
+CREATE TABLE `ratingparent` (
+  `id` int(11) NOT NULL,
+  `coach` int(11) NOT NULL,
+  `comment` varchar(500) NOT NULL,
+  `rating` double(2,1) NOT NULL,
+  `user` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ratingparent`
+--
+
+INSERT INTO `ratingparent` (`id`, `coach`, `comment`, `rating`, `user`) VALUES
+(1, 4, 'asdf', 4.0, 3),
+(2, 4, 'adsf', 2.0, 3),
+(3, 4, 'Meer verbetering nodig', 2.5, 3);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `trainingen`
 --
 
 CREATE TABLE `trainingen` (
+  `naam` text NOT NULL,
+  `kosten` text NOT NULL,
+  `van` text NOT NULL,
+  `tot` text NOT NULL,
+  `min_deelnemers` int(11) NOT NULL,
+  `max_deelnemers` int(11) NOT NULL,
+  `omschrijving` text NOT NULL,
+  `club_id` text NOT NULL,
+  `coach` text NOT NULL,
   `id` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `type` varchar(50) NOT NULL,
-  `trainers` int(11) NOT NULL,
-  `voorganers` int(11) NOT NULL,
-  `club_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `name` text NOT NULL,
+  `type` text NOT NULL,
+  `datum` date DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `trainingen`
 --
 
-INSERT INTO `trainingen` (`id`, `price`, `name`, `type`, `trainers`, `voorganers`, `club_id`) VALUES
-(1, 2, 'simple', 'keeper', 1, 936, 1),
-(2, 15, 'normal', 'voetbal', 3, 5, 1),
-(3, 115, 'deluxe', 'voetbal', 8, 512, 1),
-(4, 2, 'simple', 'keeper', 1, 936, 2),
-(5, 15, 'normal', 'voetbal', 3, 5, 2),
-(6, 115, 'deluxe', 'voetbal', 8, 512, 2),
-(7, 2, 'simple', 'keeper', 1, 936, 3),
-(8, 15, 'normal', 'voetbal', 3, 5, 3),
-(9, 115, 'deluxe', 'voetbal', 8, 512, 3);
+INSERT INTO `trainingen` (`naam`, `kosten`, `van`, `tot`, `min_deelnemers`, `max_deelnemers`, `omschrijving`, `club_id`, `coach`, `id`, `name`, `type`, `datum`) VALUES
+('100 meter sprintje trekken', '19,99', '18:00', '19:00', 4, 50, 'Iedereen wil wel eens net zo snel zijn als Ronaldo of Messi en daarom organiseer ik een 100-Meters-Challenge!', '14', 'Hafiz Elkilic', 10, 'simple', 'voetbal', '2018-03-31'),
+('100 meter sprintje trekken', '19,99', '18:00', '19:00', 4, 50, 'Iedereen wil wel eens net zo snel zijn als Ronaldo of Messi en daarom organiseer ik een 100-Meters-Challenge!', '14', 'Hafiz Elkilic', 12, 'simple', 'voetbal', '2018-03-31'),
+('100 meter sprintje trekken', '19,99', '18:00', '19:00', 4, 50, 'Iedereen wil wel eens net zo snel zijn als Ronaldo of Messi en daarom organiseer ik een 100-Meters-Challenge!', '14', 'Hafiz Elkilic', 11, 'simple', 'voetbal', '2018-03-31'),
+('Bal dribbelen', '199,99', '10:00', '19:00', 10, 100, 'Er is een speciale dag voor alle sporters. Lunch en dine is inbegrepen!', '1', 'Louis van Gaal', 7, 'deluxe', 'voetbal', '2018-03-24');
 
 -- --------------------------------------------------------
 
@@ -168,18 +216,19 @@ CREATE TABLE `users` (
   `name` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `Privileges` int(2) NOT NULL,
-  `spotclub_id` int(11) DEFAULT NULL
+  `spotclub_id` int(11) DEFAULT NULL,
+  `naam` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `password`, `Privileges`, `spotclub_id`) VALUES
-(1, 'admin@gmail.com', 'admin', 3, NULL),
-(2, 'sportclub@gmail.com', 'sportclub', 2, 1),
-(3, 'coach@gmail.com', 'coach', 1, 1),
-(4, 'parent@gmail.com', 'parent', 0, NULL);
+INSERT INTO `users` (`id`, `name`, `password`, `Privileges`, `spotclub_id`, `naam`) VALUES
+(1, 'admin@gmail.com', 'admin', 3, NULL, 'admin'),
+(2, 'sportclub@gmail.com', 'sportclub', 2, 1, 'sportclub'),
+(3, 'coach@gmail.com', 'coach', 1, 1, 'coach'),
+(4, 'parent@gmail.com', 'parent', 0, NULL, 'parent');
 
 -- --------------------------------------------------------
 
@@ -237,6 +286,18 @@ ALTER TABLE `fotosenvideos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `ratingcoach`
+--
+ALTER TABLE `ratingcoach`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ratingparent`
+--
+ALTER TABLE `ratingparent`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `trainingen`
 --
 ALTER TABLE `trainingen`
@@ -278,6 +339,16 @@ ALTER TABLE `events`
 --
 ALTER TABLE `fotosenvideos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `ratingcoach`
+--
+ALTER TABLE `ratingcoach`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- AUTO_INCREMENT for table `ratingparent`
+--
+ALTER TABLE `ratingparent`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `trainingen`
 --
