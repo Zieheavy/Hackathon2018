@@ -26,18 +26,18 @@ $(document).ready(function () {
         trainingen = JSON.parse(response);
         console.log(trainingen)
 
-        $('#price-1').prepend('<sup>$</sup>' + trainingen[0].kosten);
-        $('#price-2').prepend('<sup>$</sup>' + trainingen[1].kosten);
-        $('#price-3').prepend('<sup>$</sup>' + trainingen[2].kosten);
+        $('#price-1').prepend('<sup>€</sup>' + trainingen[0].kosten);
+        $('#price-2').prepend('<sup>€</sup>' + trainingen[1].kosten);
+        $('#price-3').prepend('<sup>€</sup>' + trainingen[2].kosten);
         $('#name-1').text(trainingen[0].name);
         $('#name-2').text(trainingen[1].name);
         $('#name-3').text(trainingen[2].name);
-        $('#info-1-1').text("trainer: " + trainingen[0].coach);
-        $('#info-1-2').text("type: " + trainingen[0].type);
-        $('#info-2-1').text("trainers: " + trainingen[1].coach);
-        $('#info-2-2').text("type: " + trainingen[1].type);
-        $('#info-3-1').text("trainers: " + trainingen[2].coach);
-        $('#info-3-2').text("type: " + trainingen[2].type);
+        $('#info-1-1').text("Trainer: " + trainingen[0].coach);
+        $('#info-1-2').text("Type: " + trainingen[0].type);
+        $('#info-2-1').text("Trainer: " + trainingen[1].coach);
+        $('#info-2-2').text("Type: " + trainingen[1].type);
+        $('#info-3-1').text("Trainer: " + trainingen[2].coach);
+        $('#info-3-2').text("Type: " + trainingen[2].type);
     });
 
     $.post("inc/getInfo.php", {
