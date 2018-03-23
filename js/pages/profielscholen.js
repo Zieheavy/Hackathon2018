@@ -24,7 +24,7 @@ $(document).ready(function(){
       coach: 4,
       username: getSession().username
     }, function(response,status){
-      console.log(response)
+      $('.js-text').val("");
     });
   })
 })

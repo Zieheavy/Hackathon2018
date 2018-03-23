@@ -153,12 +153,14 @@ $(document).ready(function(){
 	}
 
 	function loginStyling(){
-		$('.js-login-title').text('logged in')
 		$('.js-login-hide').css('opacity','0')
 		$('.js-login').text('Logout')
 		$('.js-login').addClass('js-logout')
 		$('.js-login').removeClass('js-login')
 		$('.js-toggle').toggleClass('hide')
+		setTimeout(function () {
+			$('.js-login-title').text(getSession().naam)
+		}, 10);
 	}
 
 });

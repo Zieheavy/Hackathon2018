@@ -78,6 +78,7 @@ $(document).ready(function(){
       coach: 1,
       username: getSession().username
     }, function(response,status){
+      $('.js-rating-text').val("");
     });
   })
 
