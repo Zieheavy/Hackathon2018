@@ -1,6 +1,7 @@
 $(document).ready(function(){
   console.log("profile loaded")
   var rating = "";
+  headerFooter()
   $(".rating-dynamis ").starRating({
     starSize: 25,
     hoverColor: '#ff5e00',
