@@ -34,9 +34,13 @@
      club: getUrlParameter('club')
    }, function(response,status){
      console.log(JSON.parse(response))
-     club = JSON.parse(response)[0];
-     $('.js-club-name').text(club.naam)
-     $('.js-club-info').text(club.info)
+     club = JSON.parse(response);
+     $('.js-club-name').text(club[0].naam)
+     $('.js-club-info').text(club[0].info)
+      $('.js-club-name2').text(club[1].naam)
+      $('.js-club-info2').text(club[1].info)
+      $('.js-club-name3').text(club[1].naam)
+      $('.js-club-info3').text(club[1].info)
    });
 
     $.post("inc/getTrainingen.php", {

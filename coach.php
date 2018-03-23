@@ -1,21 +1,15 @@
 <?php
-session_start();
 
-if ($_SESSION['privileges'] !== 1){
-    require ("inc/connection.php");
-}
-else{
-    header("Location: index.html");
-}
+    include ("inc/_menu.php");
 
+    if ($_SESSION['privileges'] !== 1){
+        require ("inc/connection.php");
+    }
+    else{
+        header("Location: index.html");
+    }
 
 ?>
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -37,7 +31,6 @@ else{
 <body>
 
 	<!-- Use any element to open the sidenav -->
-<?php include ("inc/_menu.html"); ?>
 	<div id="main" style="height: 1350px;">
 
         <div class="jumbotron clubsJumbotron">

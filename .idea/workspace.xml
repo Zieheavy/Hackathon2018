@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b534df75-1c6e-474e-ab24-2318d1918b5f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/pages/index.js" afterPath="$PROJECT_DIR$/js/pages/index.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/clubs.html" afterPath="$PROJECT_DIR$/clubs.html" />
+      <change beforePath="$PROJECT_DIR$/coach.php" afterPath="$PROJECT_DIR$/coach.php" />
+      <change beforePath="$PROJECT_DIR$/js/pages/clubs.js" afterPath="$PROJECT_DIR$/js/pages/clubs.js" />
+      <change beforePath="$PROJECT_DIR$/profielscholen.html" afterPath="$PROJECT_DIR$/profielscholen.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,44 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="coordinaten.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/pages/coordinaten.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="119" column="16" lean-forward="false" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
-              <folding>
-                <element signature="e#1810#1982#0" expanded="false" />
-                <element signature="e#2000#2184#0" expanded="false" />
-                <element signature="e#2202#2387#0" expanded="false" />
-                <element signature="e#2405#2573#0" expanded="false" />
-                <element signature="e#2591#2745#0" expanded="false" />
-                <element signature="e#2763#2926#0" expanded="false" />
-                <element signature="e#2944#3108#0" expanded="false" />
-                <element signature="e#3126#3293#0" expanded="false" />
-                <element signature="e#3311#3466#0" expanded="false" />
-                <element signature="e#3484#3648#0" expanded="false" />
-                <element signature="e#3666#3829#0" expanded="false" />
-                <element signature="e#3847#4017#0" expanded="false" />
-                <element signature="e#4035#4216#0" expanded="false" />
-                <element signature="e#4234#4422#0" expanded="false" />
-                <element signature="e#4440#4608#0" expanded="false" />
-                <element signature="e#4626#4789#0" expanded="false" />
-                <element signature="e#4807#4978#0" expanded="false" />
-                <element signature="e#4996#5169#0" expanded="false" />
-                <element signature="e#5187#5353#0" expanded="false" />
-                <element signature="e#5371#5532#0" expanded="false" />
-                <element signature="e#5550#5714#0" expanded="false" />
-                <element signature="e#5732#6001#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="coach.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coach.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="106" column="10" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="106" selection-end-column="10" />
+            <state relative-caret-position="-561">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,11 +72,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pages/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="692">
               <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profielscholen.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profielscholen.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1245">
+              <caret line="129" column="192" lean-forward="false" selection-start-line="129" selection-start-column="192" selection-end-line="129" selection-end-column="192" />
               <folding />
             </state>
           </provider>
@@ -156,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clubs.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clubs.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clubs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="412">
+              <caret line="98" column="59" lean-forward="false" selection-start-line="98" selection-start-column="59" selection-end-line="98" selection-end-column="59" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -176,8 +156,8 @@
       <file leaf-file-name="clubs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pages/clubs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="134" column="40" lean-forward="false" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="49" />
+            <state relative-caret-position="344">
+              <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -187,12 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>init</find>
-      <find>initMap</find>
-      <find>location</find>
-      <find>latitude</find>
-      <find>clubs</find>
-      <find>href</find>
       <find>administrative.country</find>
       <find>huid</find>
       <find>lat1</find>
@@ -208,8 +182,6 @@
       <find>_menu</find>
       <find>book order</find>
       <find>trainings</find>
-      <find>read</find>
-      <find>De clu</find>
       <find>welce</find>
       <find>ra</find>
       <find>rating</find>
@@ -217,6 +189,14 @@
       <find>day_1</find>
       <find>profiel</find>
       <find>profile</find>
+      <find>getsession().naam</find>
+      <find>plan</find>
+      <find>De clu</find>
+      <find>read</find>
+      <find>Lorem</find>
+      <find>js-club-info</find>
+      <find>js-club-name</find>
+      <find>js-collapsed collapse</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -233,22 +213,22 @@
         <option value="$PROJECT_DIR$/betaling.php" />
         <option value="$PROJECT_DIR$/inc/login.php" />
         <option value="$PROJECT_DIR$/inc/connection.php" />
-        <option value="$PROJECT_DIR$/coach.php" />
         <option value="$PROJECT_DIR$/inc/_menu.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/compare.html" />
         <option value="$PROJECT_DIR$/css/pages/clubs.css" />
-        <option value="$PROJECT_DIR$/profielscholen.html" />
         <option value="$PROJECT_DIR$/map.php" />
         <option value="$PROJECT_DIR$/inc/_menu.php" />
         <option value="$PROJECT_DIR$/inc/_footer.html" />
         <option value="$PROJECT_DIR$/js/pages/coordinaten.js" />
-        <option value="$PROJECT_DIR$/js/pages/clubs.js" />
-        <option value="$PROJECT_DIR$/clubs.html" />
         <option value="$PROJECT_DIR$/js/pages/profiel.js" />
         <option value="$PROJECT_DIR$/profiel.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/pages/index.js" />
+        <option value="$PROJECT_DIR$/profielscholen.html" />
+        <option value="$PROJECT_DIR$/coach.php" />
+        <option value="$PROJECT_DIR$/js/pages/clubs.js" />
+        <option value="$PROJECT_DIR$/clubs.html" />
       </list>
     </option>
   </component>
@@ -308,17 +288,6 @@
               <item name="hackathon2018" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="inc" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="hackathon2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackathon2018" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hackathon2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackathon2018" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -361,12 +330,12 @@
       <workItem from="1521620782952" duration="26196000" />
       <workItem from="1521648031407" duration="848000" />
       <workItem from="1521706385742" duration="25327000" />
-      <workItem from="1521792642297" duration="9782000" />
+      <workItem from="1521792642297" duration="11566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76646000" />
+    <option name="totallyTimeSpent" value="78430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1064" extended-state="6" />
@@ -704,16 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profielscholen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="130" column="23" lean-forward="false" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#tr#0;n#tbody#0;n#table#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/_menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -773,37 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pages/clubs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="134" column="40" lean-forward="false" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coach.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="106" column="10" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="106" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/pages/profiel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -835,6 +763,45 @@
         <state relative-caret-position="692">
           <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profielscholen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="129" column="192" lean-forward="false" selection-start-line="129" selection-start-column="192" selection-end-line="129" selection-end-column="192" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coach.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pages/clubs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="98" column="59" lean-forward="false" selection-start-line="98" selection-start-column="59" selection-end-line="98" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
