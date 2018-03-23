@@ -10,6 +10,26 @@ $(document).ready(function () {
     console.log(getSession())
     headerFooter();
 
+  $(".button1").click(function(){
+    var position = $(".js-body").position();
+    console.log(position)
+    scroll(0,position.top);
+  });
+  $(".button2").click(function(){
+    var position = $(".js-body1").position();
+    console.log(position)
+    scroll(0,position.top);
+  });
+  $(".button3").click(function(){
+    console.log("click")
+    // $('body').scrollTo('.js-body2', 1000, { easing: 'easeInOutExpo', offset: 0, 'axis': 'y' });
+    // $("body").animate({scrollTop: $(".js-body2").offset().top});
+    // $(".js-body2").animate({scrollTop: $(".js-body2").offset().top});
+    var position = $(".js-body2").position();
+    // console.log(position)
+    scroll(0,position.top);
+  });
+
   $.post( "inc/getClub.php", {
      club: getUrlParameter('club')
    }, function(response,status){
