@@ -24,7 +24,6 @@
     <link type="text/css" rel="stylesheet" href="https://www.fitforfree.nl/sites/fitforfree.nl/files/css/css_lhx95E5DTL6D4aZzkAgaRyi9nQwrqgPhF2pW3x3DD7A.css" media="all">
 </head>
 <body>
-<?php include ("inc/_menu.php"); ?>
 
 <div id="main">
     <div class="results-wrapper">
@@ -108,7 +107,8 @@
             </div>
         </div>
     </div>
-</div>
+</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 <?php include ("inc/_footer.html"); ?>
 
 	<!-- jQuery&bootstrap -->

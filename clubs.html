@@ -52,7 +52,11 @@
                     <button type="button" class="btn btn-primary toggleHide hide js-add-info">add</button>
                 </div>
 
-                <h5 class="col-4 display-4">Even binnen kijken</h5>
+
+            </div>
+
+            <h3 class="card-body display-4">Fotos</h3>
+            <div class="card  col-8 ">
                 <div class="card-body js-collapsed-container js-images-container collapsed">
                     <img class="js-image" src="img/puppy.jpg">
                     <img class="js-image" src="img/1.jpg">
@@ -64,32 +68,44 @@
             </div>
 
 
-            <h5 class="col-4  js-body1  display-4">Contact</h5>
-            <div class="card" id="contact">
-                <div class="card-body">
-                    <div class="row contactRow">
-                        <div class="col-6">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEf7dTs7Gr2nLcS5jVudvmm6FDYy3YvABL86TFrMhiQRXXPPamxg">
-                        </div>
-                        <div class="col-6">
-                            <h2 style="margin-left: 5vmin;">Hulp nodig</h2>
-                            <ul>
-                                <li>neem gerust contact op</li>
-                                <li>we helpen u graag</li>
-                            </ul>
-                        </div>
-                    </div>
+
+            <h3 class="card-body display-4">Contact</h3>
+            <div class="card  col-8 ">
+                <div class="card-body  collapsed">
+                            <form method="POST">
+
+
+                                <label>Informatie</label>
+                                <div style="display: flex;">
+                                    <input class="form-control" placeholder="Naam"/>
+                                    <input class="form-control" placeholder="Achternaam"/>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="exampleTextarea">Bericht</label>
+                                    <textarea  class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-primary" style="float: right;" name="verstuur_training">Verstuur vraag</button>
+
+                            </form>
                 </div>
             </div>
 
-            <h5 class="col-4 js-body2 display-4">Trainings</h5>
+            </div>
+
+
+
+
+            <h5 class="card-body display-4">Trainings</h5>
             <div class="card    ">
                 <div class="card-body row ">
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
                         <div class="db-wrapper">
                             <div class="db-pricing-eleven db-bk-color-three">
                                 <div class="price gradient" id="price-1">
-                                    <small>per quarter</small>
                                 </div>
                                 <div class="type" id="name-1">
                                     ADVANCE PLAN
@@ -100,8 +116,12 @@
                                         <li id="info-1-2"><i class="glyphicon glyphicon-time"></i></li>
                                     </ul>
                                     <div class="pricing-footer">
-
-                                        <a href="#" class="btn db-button-color-square btn-lg">BOOK ORDER</a>
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="JTRQ6WDRSVSMJ">
+                                            <input style="margin-left: 5vmin!important;" type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +131,6 @@
                         <div class="db-wrapper">
                             <div class="db-pricing-eleven db-bk-color-three">
                                 <div class="price gradient" id="price-2">
-                                    <small>per quarter</small>
                                 </div>
                                 <div class="type" id="name-2">
                                     ADVANCE PLAN
@@ -123,7 +142,12 @@
                                     </ul>
                                     <div class="pricing-footer">
 
-                                        <a href="#" class="btn db-button-color-square btn-lg">BOOK ORDER</a>
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="JTRQ6WDRSVSMJ">
+                                            <input style="margin-left: 5vmin!important;" type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +157,6 @@
                         <div class="db-wrapper">
                             <div class="db-pricing-eleven db-bk-color-three">
                                 <div class="price gradient" id="price-3">
-                                    <small>per quarter</small>
                                 </div>
                                 <div class="type" id="name-3">
                                     ADVANCE PLAN
@@ -145,7 +168,14 @@
                                     </ul>
                                     <div class="pricing-footer">
 
-                                        <a href="#" class="btn db-button-color-square btn-lg">BOOK ORDER</a>
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="JTRQ6WDRSVSMJ">
+                                            <input style="margin-left: 5vmin!important;" type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+                                        </form>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -154,6 +184,7 @@
                 </div>
             </div>
         </div>
+    <br/>
         <div class="max-width">
 
         </div>
