@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b534df75-1c6e-474e-ab24-2318d1918b5f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/clubs.html" afterPath="$PROJECT_DIR$/clubs.html" />
-      <change beforePath="$PROJECT_DIR$/css/pages/clubs.css" afterPath="$PROJECT_DIR$/css/pages/clubs.css" />
-      <change beforePath="$PROJECT_DIR$/inc/_footer.html" afterPath="$PROJECT_DIR$/inc/_footer.html" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/pages/clubs.js" afterPath="$PROJECT_DIR$/js/pages/clubs.js" />
-      <change beforePath="$PROJECT_DIR$/map.php" afterPath="$PROJECT_DIR$/map.php" />
-      <change beforePath="$PROJECT_DIR$/profielscholen.html" afterPath="$PROJECT_DIR$/profielscholen.html" />
+      <change beforePath="$PROJECT_DIR$/inc/_menu.php" afterPath="$PROJECT_DIR$/inc/_menu.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -134,10 +129,10 @@
       <file leaf-file-name="_menu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/_menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
-                <marker date="1521796534092" expanded="true" signature="389:404" ph="..." />
+                <marker date="1521799942988" expanded="true" signature="357:372" ph="..." />
               </folding>
             </state>
           </provider>
@@ -146,10 +141,11 @@
       <file leaf-file-name="clubs.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clubs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="90" column="139" lean-forward="false" selection-start-line="90" selection-start-column="139" selection-end-line="90" selection-end-column="139" />
+            <state relative-caret-position="565">
+              <caret line="101" column="42" lean-forward="false" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -199,6 +195,7 @@
       <find>$</find>
       <find>_menu</find>
       <find>book order</find>
+      <find>trainings</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,7 +217,6 @@
         <option value="$PROJECT_DIR$/coach.php" />
         <option value="$PROJECT_DIR$/inc/_menu.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/inc/_menu.php" />
         <option value="$PROJECT_DIR$/js/pages/clubs.js" />
         <option value="$PROJECT_DIR$/compare.html" />
         <option value="$PROJECT_DIR$/css/pages/clubs.css" />
@@ -228,6 +224,7 @@
         <option value="$PROJECT_DIR$/inc/_footer.html" />
         <option value="$PROJECT_DIR$/map.php" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/inc/_menu.php" />
         <option value="$PROJECT_DIR$/clubs.html" />
       </list>
     </option>
@@ -341,12 +338,12 @@
       <workItem from="1521620782952" duration="26196000" />
       <workItem from="1521648031407" duration="848000" />
       <workItem from="1521706385742" duration="25327000" />
-      <workItem from="1521792642297" duration="6305000" />
+      <workItem from="1521792642297" duration="7080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73169000" />
+    <option name="totallyTimeSpent" value="73944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1064" extended-state="6" />
@@ -776,16 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/_menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <marker date="1521796534092" expanded="true" signature="389:404" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/_footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -802,12 +789,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inc/_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1521799942988" expanded="true" signature="357:372" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clubs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="90" column="139" lean-forward="false" selection-start-line="90" selection-start-column="139" selection-end-line="90" selection-end-column="139" />
+        <state relative-caret-position="565">
+          <caret line="101" column="42" lean-forward="false" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

@@ -3,7 +3,6 @@
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="index.html">Home</a>
 	<a href="map.php">Voetbalscholen</a>
-	<a href="clubs.html">Clubs</a>
     <?php
         if (isset($_SESSION) && isset($_SESSION['naam'])){
             if (!empty($_SESSION['naam'])){
