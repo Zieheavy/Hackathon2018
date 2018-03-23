@@ -68,7 +68,7 @@ function getSession(){
 
 function headerFooter(){
     $.ajax({ type: "GET",
-       url: "inc/_menu.html",
+       url: "inc/_menu.php",
        async: false,
        success : function(text)
        {
