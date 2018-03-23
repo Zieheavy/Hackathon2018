@@ -1,5 +1,6 @@
 <?php
   session_start();
+    include 'defaults.php';
 
 // session_destroy();
   if(!isset($_SESSION['username'])){
@@ -18,8 +19,6 @@
     $_SESSION['sportClubId'] = false;
   }
 
-  $conn =  new mysqli("localhost", "root", "usbw", "businessenergy");
-
   $usersArray = [];
 
   $usersQuery = mysqli_query($conn,"SELECT * FROM `users`");
@@ -37,8 +36,8 @@
         $_SESSION['privileges'] = $usersArray[$i]['Privileges'];
         $_SESSION['loggedin'] = 1;
         if($usersArray[$i]['Privileges'] == 2 || $usersArray[$i]['Privileges'] == 1){
-          $_SESSION['sportClubId'] = $usersArray[$i]['sportclub_id'];
-            $_SESSION['naam'] = $usersArray[$i]['naam'];
+          $_SESSION['sportClubId'] = $usersArray[$i]['spotclub_id'];
+            $_SESSION['naam'] = $usersArray[$i]['name'];
           // echo "sportclub";
         }else{
           $_SESSION['sportClubId'] = false;

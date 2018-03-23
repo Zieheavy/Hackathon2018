@@ -88,6 +88,11 @@ $(document).ready(function () {
     if(getSession().sportClubId == getUrlParameter('club')){
       $('.toggleHide').toggleClass('hide')
     }
+    if(getSession().privileges == 1){
+      $('.js-plan-training').removeClass("hide")
+    }else{
+      $('.js-plan-training').addClass("hide")
+    }
   }, 10);
 
     var isVisible = false;
