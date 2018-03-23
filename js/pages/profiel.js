@@ -22,6 +22,7 @@ $(document).ready(function(){
     }, function(response,status){
       var temp;
       var arr;
+      console.log(response)
       console.log(JSON.parse(response))
       arr = JSON.parse(response)[0];
       temp = arr.rating;

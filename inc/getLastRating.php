@@ -15,8 +15,9 @@
     $temp[] = $row;
   }
   $id = $temp[0]['id'];
+  // echo $id;
 
-  $highScoreQuery = mysqli_query($conn,"SELECT * FROM `ratingparent` WHERE `user` = $id ORDER BY ID DESC LIMIT 1");
+  $highScoreQuery = mysqli_query($conn,"SELECT * FROM `ratingparent` WHERE `coach` = $id ORDER BY ID DESC LIMIT 1");
 
   while($row = mysqli_fetch_assoc($highScoreQuery))
   {
