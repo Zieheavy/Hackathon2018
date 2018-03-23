@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b534df75-1c6e-474e-ab24-2318d1918b5f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/img/1.jpg" afterPath="$PROJECT_DIR$/img/1.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/2.jpg" afterPath="$PROJECT_DIR$/img/2.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/3.jpg" afterPath="$PROJECT_DIR$/img/3.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/4.jpg" afterPath="$PROJECT_DIR$/img/4.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/5.jpg" afterPath="$PROJECT_DIR$/img/5.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/puppy.jpg" afterPath="$PROJECT_DIR$/img/puppy.jpg" />
+      <change beforePath="$PROJECT_DIR$/inc/_footer.html" afterPath="$PROJECT_DIR$/inc/_footer.html" />
+      <change beforePath="$PROJECT_DIR$/map.php" afterPath="$PROJECT_DIR$/map.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,20 +52,20 @@
       <file leaf-file-name="coach.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coach.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="255">
               <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/map.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="293">
+              <caret line="16" column="15854" lean-forward="false" selection-start-line="16" selection-start-column="15854" selection-end-line="16" selection-end-column="15854" />
               <folding>
-                <element signature="e#30197#30204#1#HTML" expanded="true" />
+                <element signature="e#24745#24752#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users" pinned="false" current-in-tab="false">
         <entry file="das://table:/898f6a47/2a75c56b-e512-47c7-9eeb-833decd022b4/businessenergy.users">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -97,8 +92,8 @@
       <file leaf-file-name="_footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/_footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="175" lean-forward="false" selection-start-line="0" selection-start-column="175" selection-end-line="0" selection-end-column="175" />
               <folding />
             </state>
           </provider>
@@ -206,8 +201,8 @@
         <option value="$PROJECT_DIR$/inc/login.php" />
         <option value="$PROJECT_DIR$/inc/connection.php" />
         <option value="$PROJECT_DIR$/coach.php" />
-        <option value="$PROJECT_DIR$/inc/_footer.html" />
         <option value="$PROJECT_DIR$/inc/_menu.html" />
+        <option value="$PROJECT_DIR$/inc/_footer.html" />
         <option value="$PROJECT_DIR$/map.php" />
       </list>
     </option>
@@ -310,12 +305,12 @@
       <workItem from="1521620782952" duration="26196000" />
       <workItem from="1521648031407" duration="848000" />
       <workItem from="1521706385742" duration="25327000" />
-      <workItem from="1521792642297" duration="1185000" />
+      <workItem from="1521792642297" duration="1607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68049000" />
+    <option name="totallyTimeSpent" value="68471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1064" extended-state="6" />
@@ -325,7 +320,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16151386" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -687,14 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/_footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/_menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -740,29 +727,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coach.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2a75c56b-e512-47c7-9eeb-833decd022b4/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding>
-            <element signature="e#30197#30204#1#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -777,6 +746,32 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coach.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="175" lean-forward="false" selection-start-line="0" selection-start-column="175" selection-end-line="0" selection-end-column="175" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="16" column="15854" lean-forward="false" selection-start-line="16" selection-start-column="15854" selection-end-line="16" selection-end-column="15854" />
+          <folding>
+            <element signature="e#24745#24752#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
