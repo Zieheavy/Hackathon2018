@@ -2,11 +2,6 @@ body{
     background-color: #E3E3E3;
 }
 
-.planTraining{
-  color: white;
-  text-decoration: none
-}
-
 .js-collapsed{
   display:none;
 }
