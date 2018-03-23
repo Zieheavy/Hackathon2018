@@ -159,7 +159,7 @@ $(document).ready(function(){
 		$('.js-login').removeClass('js-login')
 		$('.js-toggle').toggleClass('hide')
 		setTimeout(function () {
-			$('.js-login-title').text(getSession().naam)
+			$('.js-login-title').text("Ingelogd als: "+getSession().naam)
 		}, 10);
 	}
 
