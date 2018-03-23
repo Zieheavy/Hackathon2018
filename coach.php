@@ -98,9 +98,6 @@
             </div>
         </div>
 	</div>
-
-	<!--Footer-->
-			<!--/.Footer-->
 </div>
     <?php include ("inc/_footer.html"); ?>
 	<!-- jQuery&bootstrap -->
