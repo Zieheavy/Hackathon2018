@@ -143,7 +143,11 @@ $(document).ready(function(){
 			getSession();
 			if(response	== "loggedin"){
 		  getSession();
-				loginStyling();
+			loginStyling();
+
+			if(getSession().privileges == 1 || getSession().privileges == 0){
+				$('.js-profile').removeClass("hide")
+			}
 			}
 	  });
 	}
